@@ -6,7 +6,6 @@ import { BentoSectionHeader, BentoTag } from "@/components/ui/BentoCard";
 import { ArrowUpRight, CheckCircle2, ChevronDown, ChevronUp, X, Sparkles, Smartphone, Brain, Layers } from "lucide-react";
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState<"all" | "ai" | "mobile" | "ml">("all");
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -31,15 +30,10 @@ export default function ProjectsSection() {
 
   const allProjects = portfolioData.projects;
 
-  const filteredProjects = allProjects.filter(
-    (p) => filter === "all" || p.category === filter
-  );
-
-  // In "all" mode, show 4 projects unless expanded
-  const displayedProjects =
-    filter === "all" && !isExpanded
-      ? filteredProjects.slice(0, 4)
-      : filteredProjects;
+  // Show 4 projects unless expanded
+  const displayedProjects = isExpanded
+    ? allProjects
+    : allProjects.slice(0, 4);
 
   // Soft curated background tints matching modern studio showcase aesthetic
   const getCanvasTint = (idx: number) => {
@@ -75,31 +69,6 @@ export default function ProjectsSection() {
         eyebrow="02 // PORTFOLIO"
         title="Featured Systems & Projects"
         description="Production Generative AI workflows, multi-agent frameworks, fine-tuned models, and cross-platform Flutter applications."
-        action={
-          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-xs max-w-full overflow-x-auto no-scrollbar">
-            {[
-              { id: "all", label: "All Work" },
-              { id: "ai", label: "Generative AI" },
-              { id: "mobile", label: "Flutter Mobile" },
-              { id: "ml", label: "Machine Learning" },
-            ].map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setFilter(cat.id as any);
-                  setIsExpanded(false);
-                }}
-                className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
-                  filter === cat.id
-                    ? "bg-slate-900 text-white shadow-xs"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        }
       />
 
       {/* 2-Column Showcase Grid */}
@@ -165,8 +134,8 @@ export default function ProjectsSection() {
         })}
       </div>
 
-      {/* Explore More Toggle (Only visible in 'all' filter when there are more projects) */}
-      {filter === "all" && allProjects.length > 4 && (
+      {/* Explore More Toggle (Only visible when there are more projects) */}
+      {allProjects.length > 4 && (
         <div className="flex justify-center mt-12 sm:mt-16">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
