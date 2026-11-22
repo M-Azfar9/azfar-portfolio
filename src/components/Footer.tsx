@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden z-10 -mt-32 sm:-mt-44 min-h-[500px] sm:min-h-[580px] flex flex-col justify-end">
+    <footer className="relative w-full overflow-hidden z-10 -mt-24 sm:-mt-44 min-h-[440px] sm:min-h-[580px] flex flex-col justify-end">
       {/* Background Image: Distinct concentric dome/circle fade radiating from bottom center under contact section */}
       <div 
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
@@ -36,8 +36,8 @@ export default function Footer() {
         />
       </div>
 
-      <div className="pt-36 sm:pt-48 pb-12 sm:pb-16 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
-        <BentoCard hoverEffect={false} className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
+      <div className="pt-28 sm:pt-48 pb-10 sm:pb-16 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
+        <BentoCard hoverEffect={false} className="p-6 sm:p-10 flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
         {/* Left: Brand Identity in Deltha */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <div className="flex items-center gap-3">

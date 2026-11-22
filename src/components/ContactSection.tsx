@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="pt-36 sm:pt-44 pb-20 sm:pb-24 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="contact" className="pt-24 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         eyebrow="05 // INITIATE CONTACT"
         title="Let's Build Frontier Systems."
@@ -24,14 +24,14 @@ export default function ContactSection() {
       />
 
       {/* 12-Column Responsive Contact Bento Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
         {/* Card A: Direct Communications Hub (Col 7) */}
-        <BentoCard variant="highlight" className="lg:col-span-7 gap-6">
+        <BentoCard variant="highlight" className="lg:col-span-7 p-6 sm:p-8 gap-5 sm:gap-6">
           <div className="flex flex-col gap-4">
             <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
               DIRECT REACHOUT
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-sora tracking-tight">
+            <h3 className="text-xl sm:text-3xl font-bold text-slate-900 font-sora tracking-tight">
               Start an Engineering Conversation
             </h3>
             <p className="text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
@@ -40,14 +40,14 @@ export default function ContactSection() {
 
             {/* Direct Contact Blocks */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <BentoSubCard className="flex flex-col gap-1">
+              <BentoSubCard className="flex flex-col gap-1 p-4">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">EMAIL ADDRESS</span>
                 <span className="text-xs sm:text-sm font-mono font-semibold text-slate-900 truncate">
                   {personal.email}
                 </span>
               </BentoSubCard>
 
-              <BentoSubCard className="flex flex-col gap-1">
+              <BentoSubCard className="flex flex-col gap-1 p-4">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">PHONE / WHATSAPP</span>
                 <span className="text-xs sm:text-sm font-mono font-semibold text-slate-900">
                   {personal.phone}
@@ -57,10 +57,10 @@ export default function ContactSection() {
           </div>
 
           {/* Action Row */}
-          <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-slate-200/80">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-4 border-t border-slate-200/80">
             <a
               href={`mailto:${personal.email}`}
-              className="glow-button font-sora font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center gap-2 cursor-pointer shadow-sm"
+              className="glow-button font-sora font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer shadow-sm"
             >
               <Mail className="w-4 h-4" />
               <span>Send Direct Email</span>
@@ -68,7 +68,7 @@ export default function ContactSection() {
 
             <button
               onClick={handleCopyEmail}
-              className="glass-btn font-sora font-semibold text-xs sm:text-sm text-slate-900 px-6 py-3.5 rounded-full flex items-center gap-2 cursor-pointer hover:bg-white shadow-xs"
+              className="glass-btn font-sora font-semibold text-xs sm:text-sm text-slate-900 px-6 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer hover:bg-white shadow-xs"
             >
               {copied ? (
                 <>

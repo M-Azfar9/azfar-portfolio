@@ -98,7 +98,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="skills" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       {/* Scoped CSS Keyframes ensuring absolute browser compatibility */}
       <style>{`
         @keyframes marqueeScrollLeft {
@@ -138,11 +138,11 @@ export default function SkillsSection() {
           return (
             <BentoCard
               key={idx}
-              className="domain-bento-card relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden group cursor-pointer transition-all duration-300 hover:border-[#588ce4]/60 hover:shadow-[0_16px_36px_-6px_rgba(88,140,228,0.12)]"
+              className="domain-bento-card relative flex flex-col justify-between p-5 sm:p-8 overflow-hidden group cursor-pointer transition-all duration-300 hover:border-[#588ce4]/60 hover:shadow-[0_16px_36px_-6px_rgba(88,140,228,0.12)]"
             >
               {/* Centered Domain Header with Abstract Icon Above Heading */}
               <div className="relative z-10 flex flex-col items-center justify-center text-center pt-2">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 flex items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-1">
+                <div className="w-14 h-14 sm:w-20 sm:h-20 mb-2.5 sm:mb-3 flex items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-1">
                   <img
                     src={skillGroup.abstractIcon}
                     alt={`${skillGroup.category} abstract icon`}
@@ -151,7 +151,7 @@ export default function SkillsSection() {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-[#2563eb] transition-colors text-center px-2">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-[#2563eb] transition-colors text-center px-1 sm:px-2">
                   {skillGroup.category}
                 </h3>
               </div>

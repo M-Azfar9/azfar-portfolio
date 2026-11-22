@@ -10,7 +10,7 @@ export default function ExperienceSection() {
   const currentRole = experience[0];
 
   return (
-    <section id="experience" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="experience" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         eyebrow="03 // CAREER TRACK"
         title="Professional Experience"
@@ -18,8 +18,8 @@ export default function ExperienceSection() {
       />
 
       {/* 12-Column Career Bento Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <BentoCard variant="highlight" className="lg:col-span-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
+        <BentoCard variant="highlight" className="lg:col-span-12 p-6 sm:p-8 gap-6 sm:gap-8">
           {/* Header Row */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200/80">
             <div className="flex items-start gap-4">

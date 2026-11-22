@@ -70,13 +70,13 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         eyebrow="02 // PORTFOLIO"
         title="Featured Systems & Projects"
         description="Production Generative AI workflows, multi-agent frameworks, fine-tuned models, and cross-platform Flutter applications."
         action={
-          <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-xs w-fit">
+          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white border border-slate-200 shadow-xs max-w-full overflow-x-auto no-scrollbar">
             {[
               { id: "all", label: "All Work" },
               { id: "ai", label: "Generative AI" },
@@ -89,7 +89,7 @@ export default function ProjectsSection() {
                   setFilter(cat.id as any);
                   setIsExpanded(false);
                 }}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                   filter === cat.id
                     ? "bg-slate-900 text-white shadow-xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
@@ -103,19 +103,19 @@ export default function ProjectsSection() {
       />
 
       {/* 2-Column Showcase Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
         {displayedProjects.map((project, idx) => {
           const canvasBg = getCanvasTint(idx);
 
           return (
             <div
               key={project.id}
-              className="rounded-[32px] overflow-hidden border border-slate-200/90 bg-white shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer"
+              className="rounded-3xl sm:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
               {/* Showcase Image Stage */}
               <div
-                className={`h-[280px] sm:h-[340px] md:h-[380px] ${canvasBg} flex items-center justify-center p-6 sm:p-8 relative overflow-hidden`}
+                className={`h-[220px] xs:h-[260px] sm:h-[320px] md:h-[380px] ${canvasBg} flex items-center justify-center p-4 sm:p-8 relative overflow-hidden`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -127,23 +127,23 @@ export default function ProjectsSection() {
                       target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
                     }
                   }}
-                  className="max-h-full max-w-full object-contain rounded-2xl shadow-md group-hover:scale-[1.025] transition-transform duration-500 ease-out"
+                  className="max-h-full max-w-full object-contain rounded-xl sm:rounded-2xl shadow-md group-hover:scale-[1.025] transition-transform duration-500 ease-out"
                 />
               </div>
 
               {/* Bottom Metadata Bar */}
-              <div className="p-7 sm:p-8 flex flex-col justify-between gap-4 bg-white flex-1">
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-blue-600 transition-colors">
+              <div className="p-5 sm:p-8 flex flex-col justify-between gap-3 sm:gap-4 bg-white flex-1">
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="text-lg sm:text-2xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-slate-500 font-sans leading-relaxed line-clamp-1 truncate">
+                  <p className="text-xs sm:text-sm text-slate-500 font-sans leading-relaxed line-clamp-1 truncate">
                     {project.subtitle}
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between pt-2 border-t border-slate-100">
-                  <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-slate-100 text-slate-700 border border-slate-200/70">
+                  <span className="inline-flex items-center px-2.5 sm:px-3.5 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-slate-100 text-slate-700 border border-slate-200/70">
                     {project.tagLabel || getCategoryLabel(project.category)}
                   </span>
 

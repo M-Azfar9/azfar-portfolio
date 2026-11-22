@@ -10,7 +10,7 @@ export default function AboutSection() {
   const currentRole = experience[0];
 
   return (
-    <section id="about" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         eyebrow="01 // BIOGRAPHY"
         title="About & Engineering Vision"
@@ -18,9 +18,9 @@ export default function AboutSection() {
       />
 
       {/* 12-Column Balanced Bento Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
         {/* ROW 1: Card 1 - Executive Narrative (Col 6) */}
-        <BentoCard variant="highlight" className="lg:col-span-6 gap-6">
+        <BentoCard variant="highlight" className="lg:col-span-6 p-6 sm:p-8 gap-5 sm:gap-6">
           <div className="flex flex-col gap-4">
             <div>
               <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
@@ -48,7 +48,7 @@ export default function AboutSection() {
         </BentoCard>
 
         {/* ROW 1: Card 2 - Professional Experience (Col 6) */}
-        <BentoCard className="lg:col-span-6 flex flex-col justify-between gap-5">
+        <BentoCard className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5">
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">

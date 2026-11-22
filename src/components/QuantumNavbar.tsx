@@ -9,9 +9,9 @@ export default function QuantumNavbar() {
   const { personal } = portfolioData;
 
   return (
-    <header className="fixed top-5 inset-x-0 mx-auto w-[94%] max-w-[1240px] z-50 transition-all pointer-events-none">
+    <header className="fixed top-3 sm:top-5 inset-x-0 mx-auto w-[92%] sm:w-[94%] max-w-[1240px] z-50 transition-all pointer-events-none">
       <div 
-        className="pointer-events-auto rounded-full px-6 sm:px-8 py-3 sm:py-3.5 flex items-center justify-between text-black transition-all"
+        className="pointer-events-auto rounded-full px-4 sm:px-8 py-2.5 sm:py-3.5 flex items-center justify-between text-black transition-all"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.48)",
           backdropFilter: "blur(20px) saturate(180%)",
@@ -112,35 +112,35 @@ export default function QuantumNavbar() {
           <a
             href="#about"
             onClick={() => setMobileMenuOpen(false)}
-            className="py-1.5 text-black font-bold hover:text-blue-600"
+            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             About
           </a>
           <a
             href="#projects"
             onClick={() => setMobileMenuOpen(false)}
-            className="py-1.5 text-black font-bold hover:text-blue-600"
+            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             Projects
           </a>
           <a
             href="#experience"
             onClick={() => setMobileMenuOpen(false)}
-            className="py-1.5 text-black font-bold hover:text-blue-600"
+            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             Experience
           </a>
           <a
             href="#skills"
             onClick={() => setMobileMenuOpen(false)}
-            className="py-1.5 text-black font-bold hover:text-blue-600"
+            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             Skills
           </a>
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="py-1.5 text-black font-bold hover:text-blue-600"
+            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             Contact
           </a>

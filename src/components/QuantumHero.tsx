@@ -15,7 +15,7 @@ export default function QuantumHero() {
 
   return (
     <>
-      <section className="relative w-screen h-screen min-h-[700px] flex items-center overflow-hidden select-none bg-[#f8fafc]">
+      <section className="relative w-full min-h-[100svh] sm:min-h-[700px] flex items-center overflow-hidden select-none bg-[#f8fafc]">
         {/* Background Image: Directly visible with object-cover and cache-busting */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -31,11 +31,11 @@ export default function QuantumHero() {
       </div>
 
       {/* Hero UI Content (z-20 on top of image and stars) */}
-      <div className="relative z-20 w-full max-w-[1360px] mx-auto px-6 sm:px-12 lg:px-16 flex flex-col justify-center h-full pt-16">
+      <div className="relative z-20 w-full max-w-[1360px] mx-auto px-5 sm:px-12 lg:px-16 flex flex-col justify-center h-full pt-20 sm:pt-16 pb-12 sm:pb-0">
         <div className="max-w-4xl flex flex-col">
           {/* Eyebrow Pill with translucent frosted glass, contrast black font, and staggered entrance */}
           <div 
-            className="hero-enter-1 inline-flex items-center px-4 py-1.5 rounded-full w-fit text-[11px] sm:text-xs font-mono tracking-[0.2em] text-black font-extrabold uppercase mb-5"
+            className="hero-enter-1 inline-flex items-center px-3.5 sm:px-4 py-1.5 rounded-full w-fit text-[10px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-black font-extrabold uppercase mb-4 sm:mb-5"
             style={{
               backgroundColor: "rgba(255, 255, 255, 0.48)",
               backdropFilter: "blur(20px) saturate(180%)",
@@ -49,7 +49,7 @@ export default function QuantumHero() {
 
           {/* Main Title using Deltha Font with Masked Line-Slide Reveal */}
           <div className="flex flex-col">
-            <h1 className="font-hero text-4xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[80px] tracking-[0.03em] leading-[0.96] uppercase quantum-title-glow whitespace-nowrap">
+            <h1 className="font-hero text-3xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.96] uppercase quantum-title-glow">
               <span className="block overflow-hidden py-0.5">
                 <span className="hero-title-line-1 hero-name-regular block text-transparent bg-clip-text bg-gradient-to-b from-[#18181b] to-[#3f3f46]">
                   MUHAMMAD
@@ -63,18 +63,18 @@ export default function QuantumHero() {
             </h1>
 
             {/* Tagline with staggered entrance */}
-            <p className="hero-enter-3 font-inter font-black text-base sm:text-xl lg:text-2xl tracking-[0.22em] text-black uppercase mt-4">
+            <p className="hero-enter-3 font-inter font-black text-xs sm:text-lg lg:text-2xl tracking-[0.08em] sm:tracking-[0.16em] lg:tracking-[0.22em] text-black uppercase mt-3 sm:mt-4">
               {personal.tagline}
             </p>
           </div>
 
           {/* Description with staggered entrance */}
-          <p className="hero-enter-3 font-inter font-semibold text-xs sm:text-sm md:text-base text-black/85 max-w-xl leading-relaxed mt-4">
+          <p className="hero-enter-3 font-inter font-semibold text-xs sm:text-sm md:text-base text-black/85 max-w-xl leading-relaxed mt-3 sm:mt-4">
             From intelligent AI workflows to cross-platform applications, turning complex ideas into practical software.
           </p>
 
           {/* Action Buttons: Primary "Resume" and Secondary "Contact Me" with tactile active & hover depth */}
-          <div className="hero-enter-4 flex flex-wrap items-center gap-4 mt-8 sm:mt-10">
+          <div className="hero-enter-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-10">
             <a
               href={personal.resumeUrl}
               target="_blank"
