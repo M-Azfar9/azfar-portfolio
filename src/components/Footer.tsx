@@ -29,7 +29,7 @@ export default function Footer() {
           className="w-full h-full object-cover object-bottom"
           style={{
             opacity: 0.7,
-            filter: "blur(8px)",
+            filter: "blur(2px)",
             transform: "scale(1.05)",
           }}
         />
@@ -50,7 +50,7 @@ export default function Footer() {
           className="w-full h-full object-cover object-bottom"
           style={{
             opacity: 0.7,
-            filter: "blur(8px)",
+            filter: "blur(2px)",
             transform: "scale(1.05)",
           }}
         />
