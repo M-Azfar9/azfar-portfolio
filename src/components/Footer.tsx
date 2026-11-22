@@ -13,13 +13,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden z-20 min-h-[380px] sm:min-h-[460px] flex flex-col justify-end">
-      {/* Background Image: Distinct concentric dome/circle fade radiating from bottom center */}
+    <footer className="relative w-full overflow-hidden z-10 -mt-32 sm:-mt-44 min-h-[500px] sm:min-h-[580px] flex flex-col justify-end">
+      {/* Background Image: Distinct concentric dome/circle fade radiating from bottom center under contact section */}
       <div 
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
         style={{
-          maskImage: "radial-gradient(ellipse 75% 85% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 88%)",
-          WebkitMaskImage: "radial-gradient(ellipse 75% 85% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 88%)",
+          maskImage: "radial-gradient(ellipse 85% 90% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.6) 65%, rgba(0,0,0,0) 95%)",
+          WebkitMaskImage: "radial-gradient(ellipse 85% 90% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.6) 65%, rgba(0,0,0,0) 95%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,7 +36,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="py-12 sm:py-16 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
+      <div className="pt-36 sm:pt-48 pb-12 sm:pb-16 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
         <BentoCard className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: Brand Identity in Deltha */}
         <div className="flex flex-col items-center md:items-start gap-1">
