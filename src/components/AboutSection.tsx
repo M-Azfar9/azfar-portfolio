@@ -28,7 +28,7 @@ export default function AboutSection() {
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-sora tracking-tight leading-snug">
-              ABOUT ME
+              About Me
             </h3>
 
             <div className="space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
