@@ -1,4 +1,4 @@
-# Muhammad Azfar — Portfolio
+# Muhammad Azfar - Portfolio
 
 > **AI Engineer & Flutter Developer**  
 > Software Engineering Undergraduate @ National University of Sciences and Technology (NUST), Islamabad.  
