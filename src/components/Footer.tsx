@@ -13,8 +13,30 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-200/80 py-14 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
-      <BentoCard className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20">
+      {/* Background Image: Complete footer section with blur, 0.7 opacity, and concentric circle fade from bottom */}
+      <div 
+        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        style={{
+          maskImage: "radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%)",
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero-section-bg.webp"
+          alt=""
+          className="w-full h-full object-cover object-bottom"
+          style={{
+            opacity: 0.7,
+            filter: "blur(8px)",
+            transform: "scale(1.05)",
+          }}
+        />
+      </div>
+
+      <div className="py-14 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-10">
+        <BentoCard className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: Brand Identity in Deltha */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <div className="flex items-center gap-3">
@@ -63,6 +85,7 @@ export default function Footer() {
           </button>
         </div>
       </BentoCard>
+      </div>
     </footer>
   );
 }
