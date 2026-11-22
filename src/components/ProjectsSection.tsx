@@ -119,7 +119,7 @@ export default function ProjectsSection() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={project.image || "/Projects-SS/Qwen Fine-Tuning.png"}
+                  src={project.image || "/Projects-SS/qwen-fine-tuning.png"}
                   alt={project.title}
                   className="max-h-full max-w-full object-contain rounded-2xl shadow-md group-hover:scale-[1.025] transition-transform duration-500 ease-out"
                 />
@@ -204,7 +204,7 @@ export default function ProjectsSection() {
             <div className="w-full h-56 sm:h-64 rounded-2xl bg-[#f6f3eb] flex items-center justify-center p-4 overflow-hidden border border-slate-100">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={selectedProject.image || "/Projects-SS/Qwen Fine-Tuning.png"}
+                src={selectedProject.image || "/Projects-SS/qwen-fine-tuning.png"}
                 alt={selectedProject.title}
                 className="max-h-full max-w-full object-contain rounded-xl shadow-md"
               />

@@ -31,10 +31,11 @@ function GeometricStarMesh({
   showEdges = true,
   edgeColor = "#3f3f46",
   autoRotate = true,
-  autoRotateSpeed = 0.5,
+  autoRotateSpeed = 0.6,
   interactive = true,
 }: GeometricStarMeshProps) {
-  const groupRef = useRef<THREE.Group>(null!);
+  const tiltGroupRef = useRef<THREE.Group>(null!);
+  const spinGroupRef = useRef<THREE.Group>(null!);
   const { pointer } = useThree();
 
   // 1. Calculate the 8 vertices of the two interpenetrating regular tetrahedra
@@ -90,55 +91,51 @@ function GeometricStarMesh({
     });
   }, [size, beamThickness]);
 
-  // Smooth floating and mouse parallax animation
-  useFrame((state, delta) => {
-    if (!groupRef.current) return;
-
-    if (autoRotate) {
-      groupRef.current.rotation.y += delta * autoRotateSpeed * 0.6;
-      groupRef.current.rotation.x += delta * autoRotateSpeed * 0.25;
+  // Clean animation loop using nested groups: tilt for cursor, spin for continuous rotation
+  useFrame((_, delta) => {
+    if (spinGroupRef.current && autoRotate) {
+      spinGroupRef.current.rotation.y += delta * autoRotateSpeed * 0.8;
+      spinGroupRef.current.rotation.x += delta * autoRotateSpeed * 0.35;
     }
 
-    if (interactive) {
-      // Subtle tilt towards mouse cursor
-      const targetRotX = pointer.y * 0.35;
-      const targetRotY = pointer.x * 0.45;
-
-      groupRef.current.rotation.x = THREE.MathUtils.lerp(
-        groupRef.current.rotation.x,
-        targetRotX + (autoRotate ? groupRef.current.rotation.x : 0.45),
-        0.05
+    if (tiltGroupRef.current && interactive) {
+      tiltGroupRef.current.rotation.x = THREE.MathUtils.lerp(
+        tiltGroupRef.current.rotation.x,
+        -pointer.y * 0.35,
+        0.06
       );
-      groupRef.current.rotation.y = THREE.MathUtils.lerp(
-        groupRef.current.rotation.y,
-        targetRotY + (autoRotate ? groupRef.current.rotation.y : 0.75),
-        0.05
+      tiltGroupRef.current.rotation.y = THREE.MathUtils.lerp(
+        tiltGroupRef.current.rotation.y,
+        pointer.x * 0.45,
+        0.06
       );
     }
   });
 
   return (
-    // Initial isometric perspective angle matching the reference image
-    <group ref={groupRef} rotation={[0.42, 0.65, 0.2]}>
-      {beamTransforms.map((beam, i) => (
-        <group key={i} matrix={beam.matrix} matrixAutoUpdate={false}>
-          <mesh castShadow receiveShadow>
-            <boxGeometry args={[beamThickness, beam.length, beamThickness]} />
-            <meshStandardMaterial
-              color={color}
-              roughness={roughness}
-              metalness={metalness}
-            />
-            {showEdges && (
-              <Edges
-                threshold={15}
-                color={edgeColor}
-                lineWidth={1.2}
+    <group ref={tiltGroupRef}>
+      {/* Initial isometric perspective angle matching the reference image */}
+      <group ref={spinGroupRef} rotation={[0.42, 0.65, 0.2]}>
+        {beamTransforms.map((beam, i) => (
+          <group key={i} matrix={beam.matrix} matrixAutoUpdate={false}>
+            <mesh castShadow receiveShadow>
+              <boxGeometry args={[beamThickness, beam.length, beamThickness]} />
+              <meshStandardMaterial
+                color={color}
+                roughness={roughness}
+                metalness={metalness}
               />
-            )}
-          </mesh>
-        </group>
-      ))}
+              {showEdges && (
+                <Edges
+                  threshold={15}
+                  color={edgeColor}
+                  lineWidth={1.2}
+                />
+              )}
+            </mesh>
+          </group>
+        ))}
+      </group>
     </group>
   );
 }
@@ -155,7 +152,7 @@ export interface GeometricStarProps extends GeometricStarMeshProps {
  * Renders the abstract geometric star on an ultra-clean 100% transparent canvas.
  */
 export default function GeometricStar({
-  className = "w-full h-full min-h-[400px]",
+  className = "w-full h-full",
   enableControls = false,
   fov = 42,
   cameraDistance = 7.2,
@@ -184,9 +181,9 @@ export default function GeometricStar({
 
         <Float
           speed={1.8}
-          rotationIntensity={0.3}
-          floatIntensity={0.4}
-          floatingRange={[-0.15, 0.15]}
+          rotationIntensity={0.25}
+          floatIntensity={0.35}
+          floatingRange={[-0.12, 0.12]}
         >
           <GeometricStarMesh {...meshProps} />
         </Float>

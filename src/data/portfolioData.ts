@@ -182,7 +182,7 @@ export const portfolioData: PortfolioData = {
       title: "Doxer AI: Codebase Intelligence Fabric",
       subtitle: "Hierarchical Multi-Agent System for Code Analysis, Documentation & SRS",
       category: "ai",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Agentic AI & LLMs",
       description: [
         "Engineered a hierarchical multi-agent system in Python with LangGraph, orchestrating bounded Technical QA, Documentation, and SRS subagents; achieved 100% cross-route accuracy.",
@@ -199,7 +199,7 @@ export const portfolioData: PortfolioData = {
       title: "Qwen3 Function Calling: Parameter-Efficient Fine-Tuning",
       subtitle: "FP16 LoRA Fine-Tuning and Benchmarking of Tool-Calling LLMs",
       category: "ai",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "LLM Fine-Tuning",
       description: [
         "Fine-tuned Qwen3-1.7B using supervised fine-tuning (SFT) with FP16 LoRA on the Glaive Function Calling v2 dataset, training 17.4M parameters (1.0% of model).",
@@ -215,7 +215,7 @@ export const portfolioData: PortfolioData = {
       title: "Sonyc: Production Multimodal RAG System",
       subtitle: "End-to-End Generative AI Document Intelligence Platform",
       category: "ai",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Multimodal RAG",
       description: [
         "Designed and deployed a full RAG system ingesting PDFs, GitHub repos, YouTube transcripts, and live web pages into a unified vector store.",
@@ -231,7 +231,7 @@ export const portfolioData: PortfolioData = {
       title: "KMHub: Islamic Super App",
       subtitle: "Production Flutter Application with Real-Time Communication & AI Assistant",
       category: "mobile",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Consumer Mobile App",
       description: [
         "Built and shipped a live production mobile app for ZAM Studios combining real-time multimedia chat (text, video, audio, links), Quran with offline audio, and Hadith books.",
@@ -245,7 +245,7 @@ export const portfolioData: PortfolioData = {
       title: "ForiKaam: Reverse-Auction Labor Marketplace",
       subtitle: "Dual-App Mobile Marketplace with Real-Time Bidding & Offline Architecture",
       category: "mobile",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Marketplace Mobile",
       description: [
         "Built dual Flutter mobile applications for customers and workers with location-based requests, parameterized job postings, and real-time reverse-auction bidding.",
@@ -261,7 +261,7 @@ export const portfolioData: PortfolioData = {
       title: "Enterprise Ride-Hailing Platform",
       subtitle: "Multi-Role Transport Ecosystem for Intracity & Intercity Travel",
       category: "mobile",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Transport Platform",
       description: [
         "Developed cross-platform mobile system for ZAM Studios covering customer, driver, and fleet owner (multi-driver management) interfaces.",
@@ -275,7 +275,7 @@ export const portfolioData: PortfolioData = {
       title: "Cricket Score & Outcome Predictor",
       subtitle: "Supervised Machine Learning Regression & Classification Pipeline",
       category: "ml",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Predictive ML",
       description: [
         "Conducted end-to-end ML lifecycle: EDA, feature engineering, hyperparameter tuning, and cross-validation across six model variants.",
@@ -290,7 +290,7 @@ export const portfolioData: PortfolioData = {
       title: "Chest Infection Classification (Computer Vision)",
       subtitle: "Deep Learning Medical Image Diagnostics",
       category: "ml",
-      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      image: "/Projects-SS/qwen-fine-tuning.png",
       tagLabel: "Medical Deep Learning",
       description: [
         "Fine-tuned VGG16 and ResNet50 convolutional networks via transfer learning on labeled chest X-ray datasets.",
