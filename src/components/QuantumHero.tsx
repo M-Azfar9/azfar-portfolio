@@ -70,8 +70,7 @@ export default function QuantumHero() {
 
           {/* Description with staggered entrance */}
           <p className="hero-enter-3 font-inter font-semibold text-xs sm:text-sm md:text-base text-black/85 max-w-xl leading-relaxed mt-4">
-            Building production-oriented Generative AI systems, multi-agent workflows,
-            and scalable cross-platform mobile applications with Python, LangGraph, and Flutter.
+            From intelligent AI workflows to cross-platform applications, turning complex ideas into practical software.
           </p>
 
           {/* Action Buttons: Primary "Resume" and Secondary "Contact Me" with tactile active & hover depth */}
