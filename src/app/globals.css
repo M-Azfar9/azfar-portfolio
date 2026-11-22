@@ -79,6 +79,54 @@ body {
   box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
 }
 
+/* Universal Card Hover Background Image with Blur / Bokeh Effect (0.5 opacity) */
+.bento-card-root {
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card-root > *:not(.bento-hover-bg) {
+  position: relative;
+  z-index: 10;
+}
+
+.bento-hover-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.bento-hover-bg-inner {
+  position: absolute;
+  inset: -14px;
+  background-image: url('/hover-bg.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+  transform: scale(1.08);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-root:hover .bento-hover-bg,
+.group:hover .bento-hover-bg,
+.group\/bento:hover .bento-hover-bg,
+.group\/subcard:hover .bento-hover-bg {
+  opacity: 0.5;
+}
+
+.bento-card-root:hover .bento-hover-bg-inner,
+.group:hover .bento-hover-bg-inner,
+.group\/bento:hover .bento-hover-bg-inner,
+.group\/subcard:hover .bento-hover-bg-inner {
+  transform: scale(1.12);
+}
+
 .bento-highlight {
   position: relative;
   overflow: hidden;

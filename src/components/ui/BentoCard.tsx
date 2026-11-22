@@ -26,9 +26,16 @@ export function BentoCard({
 
   return (
     <div
-      className={`rounded-3xl border p-7 sm:p-8 flex flex-col justify-between ${variantStyles[variant]} ${hoverStyles} ${className}`}
+      className={`bento-card-root group/bento relative overflow-hidden rounded-3xl border p-7 sm:p-8 flex flex-col justify-between ${variantStyles[variant]} ${hoverStyles} ${className}`}
       {...props}
     >
+      {/* Edge-to-Edge Hover Bokeh/Blur Image Background (0.5 opacity) */}
+      {hoverEffect && (
+        <div className="bento-hover-bg" aria-hidden="true">
+          <div className="bento-hover-bg-inner" />
+        </div>
+      )}
+
       {children}
     </div>
   );
@@ -42,11 +49,16 @@ export function BentoSubCard({
 }: React.HTMLAttributes<HTMLDivElement> & { hoverEffect?: boolean }) {
   return (
     <div
-      className={`rounded-2xl bg-white/95 border border-slate-200/80 p-5 shadow-xs ${
+      className={`bento-card-root group/subcard relative overflow-hidden rounded-2xl bg-white/95 border border-slate-200/80 p-5 shadow-xs ${
         hoverEffect ? "hover:border-slate-300 hover:shadow-sm transition-all duration-200" : ""
       } ${className}`}
       {...props}
     >
+      {hoverEffect && (
+        <div className="bento-hover-bg" aria-hidden="true">
+          <div className="bento-hover-bg-inner" />
+        </div>
+      )}
       {children}
     </div>
   );
