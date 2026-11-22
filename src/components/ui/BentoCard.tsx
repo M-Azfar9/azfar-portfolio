@@ -21,22 +21,37 @@ export function BentoCard({
   };
 
   const hoverStyles = hoverEffect
-    ? "hover:border-slate-300 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+    ? "hover:border-slate-300 hover:shadow-[0_20px_40px_-8px_rgba(15,23,42,0.12)] hover:-translate-y-0.5 transition-all duration-300"
     : "";
+
+  const isRow = className.includes("flex-row");
 
   return (
     <div
-      className={`bento-card-root group/bento relative overflow-hidden rounded-3xl border p-7 sm:p-8 flex flex-col justify-between ${variantStyles[variant]} ${hoverStyles} ${className}`}
+      className={`bento-card-root group relative overflow-hidden rounded-3xl border p-7 sm:p-8 flex flex-col justify-between ${variantStyles[variant]} ${hoverStyles} ${className}`}
       {...props}
     >
       {/* Edge-to-Edge Hover Bokeh/Blur Image Background (0.5 opacity) */}
       {hoverEffect && (
-        <div className="bento-hover-bg" aria-hidden="true">
-          <div className="bento-hover-bg-inner" />
+        <div
+          className="bento-hover-bg absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-out z-0 overflow-hidden"
+          aria-hidden="true"
+        >
+          <div
+            className="bento-hover-bg-inner absolute -inset-3 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+            style={{
+              backgroundImage: "url('/hover-bg.png')",
+              filter: "blur(4px)",
+              WebkitFilter: "blur(4px)",
+            }}
+          />
         </div>
       )}
 
-      {children}
+      {/* Card Content - elevated above hover background */}
+      <div className={`relative z-10 w-full h-full flex ${isRow ? "flex-row items-center justify-between" : "flex-col justify-between"}`}>
+        {children}
+      </div>
     </div>
   );
 }
@@ -49,17 +64,14 @@ export function BentoSubCard({
 }: React.HTMLAttributes<HTMLDivElement> & { hoverEffect?: boolean }) {
   return (
     <div
-      className={`bento-card-root group/subcard relative overflow-hidden rounded-2xl bg-white/95 border border-slate-200/80 p-5 shadow-xs ${
-        hoverEffect ? "hover:border-slate-300 hover:shadow-sm transition-all duration-200" : ""
+      className={`relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200/80 p-5 shadow-xs ${
+        hoverEffect ? "hover:border-slate-300 hover:shadow-sm hover:bg-white/95 transition-all duration-200" : ""
       } ${className}`}
       {...props}
     >
-      {hoverEffect && (
-        <div className="bento-hover-bg" aria-hidden="true">
-          <div className="bento-hover-bg-inner" />
-        </div>
-      )}
-      {children}
+      <div className="relative z-10 w-full h-full">
+        {children}
+      </div>
     </div>
   );
 }

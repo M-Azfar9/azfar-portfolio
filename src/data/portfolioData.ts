@@ -182,7 +182,7 @@ export const portfolioData: PortfolioData = {
       title: "Doxer AI: Codebase Intelligence Fabric",
       subtitle: "Hierarchical Multi-Agent System for Code Analysis, Documentation & SRS",
       category: "ai",
-      image: "/Projects-SS/qwen-fine-tuning.png",
+      image: "/Projects-SS/Doxer-AI.png",
       tagLabel: "Agentic AI & LLMs",
       description: [
         "Engineered a hierarchical multi-agent system in Python with LangGraph, orchestrating bounded Technical QA, Documentation, and SRS subagents; achieved 100% cross-route accuracy.",
@@ -215,7 +215,7 @@ export const portfolioData: PortfolioData = {
       title: "Sonyc: Production Multimodal RAG System",
       subtitle: "End-to-End Generative AI Document Intelligence Platform",
       category: "ai",
-      image: "/Projects-SS/qwen-fine-tuning.png",
+      image: "/Projects-SS/Sonyc-AI.jfif",
       tagLabel: "Multimodal RAG",
       description: [
         "Designed and deployed a full RAG system ingesting PDFs, GitHub repos, YouTube transcripts, and live web pages into a unified vector store.",
