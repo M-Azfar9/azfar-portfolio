@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       <div className="pt-36 sm:pt-48 pb-12 sm:pb-16 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
-        <BentoCard className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
+        <BentoCard hoverEffect={false} className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: Brand Identity in Deltha */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <div className="flex items-center gap-3">
