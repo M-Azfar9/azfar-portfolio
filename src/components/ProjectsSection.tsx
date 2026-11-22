@@ -119,8 +119,14 @@ export default function ProjectsSection() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={project.image || "/Projects-SS/qwen-fine-tuning.png"}
+                  src={encodeURI(project.image || "/Projects-SS/qwen-fine-tuning.png")}
                   alt={project.title}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes("Qwen%20Fine-Tuning.png")) {
+                      target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
+                    }
+                  }}
                   className="max-h-full max-w-full object-contain rounded-2xl shadow-md group-hover:scale-[1.025] transition-transform duration-500 ease-out"
                 />
               </div>
@@ -204,8 +210,14 @@ export default function ProjectsSection() {
             <div className="w-full h-56 sm:h-64 rounded-2xl bg-[#f6f3eb] flex items-center justify-center p-4 overflow-hidden border border-slate-100">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={selectedProject.image || "/Projects-SS/qwen-fine-tuning.png"}
+                src={encodeURI(selectedProject.image || "/Projects-SS/qwen-fine-tuning.png")}
                 alt={selectedProject.title}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes("Qwen%20Fine-Tuning.png")) {
+                    target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
+                  }
+                }}
                 className="max-h-full max-w-full object-contain rounded-xl shadow-md"
               />
             </div>
