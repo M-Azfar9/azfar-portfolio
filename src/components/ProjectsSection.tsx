@@ -66,7 +66,6 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
-        eyebrow="02 // PORTFOLIO"
         title="Featured Systems & Projects"
         description="Production Generative AI workflows, multi-agent frameworks, fine-tuned models, and cross-platform Flutter applications."
       />

@@ -84,7 +84,7 @@ export function BentoSectionHeader({
   description,
   action,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   action?: React.ReactNode;
@@ -92,9 +92,11 @@ export function BentoSectionHeader({
   return (
     <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
       <div className="flex flex-col gap-3">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/90 shadow-xs w-fit text-[11px] font-mono tracking-widest text-blue-700 font-semibold uppercase">
-          <span>{eyebrow}</span>
-        </div>
+        {eyebrow && (
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/90 shadow-xs w-fit text-[11px] font-mono tracking-widest text-blue-700 font-semibold uppercase">
+            <span>{eyebrow}</span>
+          </div>
+        )}
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 font-sora">
           {title}
         </h2>

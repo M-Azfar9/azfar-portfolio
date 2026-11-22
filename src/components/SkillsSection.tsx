@@ -115,7 +115,6 @@ export default function SkillsSection() {
       `}</style>
 
       <BentoSectionHeader
-        eyebrow="03 // TECHNICAL SPECIFICATION"
         title="Technical Architecture Matrix"
         description="Continuous horizontal marquee stream across Generative AI systems, model fine-tuning, enterprise mobile engineering, and distributed cloud infrastructure."
       />
