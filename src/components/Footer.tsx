@@ -14,20 +14,22 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20">
-      {/* Background Image: Complete footer section with blur, 0.7 opacity, and concentric circle fade from bottom */}
+      {/* Background Image: Rooted directly at the bottom floor with concentric circle upward fade */}
       <div 
-        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        className="absolute inset-x-0 bottom-0 w-full h-full pointer-events-none select-none overflow-hidden"
         style={{
-          maskImage: "radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%)",
+          maskImage: "radial-gradient(circle at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 90%)",
+          WebkitMaskImage: "radial-gradient(circle at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 90%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero-section-bg.webp"
           alt=""
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover pointer-events-none"
           style={{
+            objectPosition: "50% 100%",
+            transformOrigin: "50% 100%",
             opacity: 0.7,
             filter: "blur(8px)",
             transform: "scale(1.05)",
