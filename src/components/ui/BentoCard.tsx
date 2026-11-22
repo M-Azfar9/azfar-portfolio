@@ -38,9 +38,11 @@ export function BentoCard({
           aria-hidden="true"
         >
           <div
-            className="bento-hover-bg-inner absolute -inset-3 bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105"
+            className="bento-hover-bg-inner absolute -inset-3 bg-cover bg-right-bottom transition-transform duration-500 ease-out group-hover:scale-105"
             style={{
               backgroundImage: "url('/hover-bg.png')",
+              backgroundPosition: "right bottom",
+              transformOrigin: "bottom right",
               filter: "blur(4px)",
               WebkitFilter: "blur(4px)",
             }}

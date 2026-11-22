@@ -101,7 +101,8 @@ body {
   inset: -10px;
   background-image: url('/hover-bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: right bottom;
+  transform-origin: bottom right;
   filter: blur(4px);
   -webkit-filter: blur(4px);
   transform: scale(1.06);
