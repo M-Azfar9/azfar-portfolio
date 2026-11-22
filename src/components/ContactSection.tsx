@@ -16,7 +16,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
+    <section id="contact" className="pt-36 sm:pt-48 pb-20 sm:pb-24 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         eyebrow="05 // INITIATE CONTACT"
         title="Let's Build Frontier Systems."
