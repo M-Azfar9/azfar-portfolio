@@ -3,10 +3,10 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { BentoCard, BentoSubCard, BentoSectionHeader } from "@/components/ui/BentoCard";
-import { Trophy, Award, MapPin, ExternalLink } from "lucide-react";
+import { Trophy, Award, ExternalLink } from "lucide-react";
 
 export default function AboutSection() {
-  const { personal, achievements, certifications } = portfolioData;
+  const { achievements, certifications } = portfolioData;
 
   return (
     <section id="about" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
@@ -54,31 +54,6 @@ export default function AboutSection() {
                 I believe modern software excellence requires full-stack rigor: from mathematical grounding and parameter-efficient model tuning (LoRA/PEFT) down to responsive 60fps mobile interfaces with offline synchronization.
               </p>
             </div>
-          </div>
-
-          {/* Telemetry Sub-Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200/80">
-            <BentoSubCard className="p-3.5 flex flex-col justify-between">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">LOCATION</span>
-              <span className="text-xs font-mono font-semibold text-slate-900 mt-1 flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                {personal.location}
-              </span>
-            </BentoSubCard>
-
-            <BentoSubCard className="p-3.5 flex flex-col justify-between">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">ACADEMICS</span>
-              <span className="text-xs font-mono font-semibold text-blue-700 mt-1">
-                NUST SEECS (3.44)
-              </span>
-            </BentoSubCard>
-
-            <BentoSubCard className="p-3.5 flex flex-col justify-between">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">EXPERIENCE</span>
-              <span className="text-xs font-mono font-semibold text-emerald-700 mt-1">
-                2+ Yrs Production
-              </span>
-            </BentoSubCard>
           </div>
         </BentoCard>
 
