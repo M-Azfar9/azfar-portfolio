@@ -21,8 +21,7 @@
 }
 
 /* 4-Tier Typography Classes */
-.font-hero,
-.font-deltha {
+.font-hero {
   font-family: var(--font-deltha), 'Deltha', sans-serif;
 }
 
