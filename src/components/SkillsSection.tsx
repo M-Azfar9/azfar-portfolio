@@ -138,11 +138,17 @@ export default function SkillsSection() {
           return (
             <BentoCard
               key={idx}
-              className="domain-bento-card flex flex-col justify-between p-6 sm:p-8 overflow-hidden group cursor-pointer"
+              className="domain-bento-card relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden group cursor-pointer transition-all duration-300 hover:border-[#588ce4]/60 hover:shadow-[0_16px_36px_-6px_rgba(88,140,228,0.12)]"
             >
+              {/* Ethereal #588ce4 Gradient Ambient Glow via Opacity Overlay */}
+              <div
+                className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out z-0 bg-gradient-to-br from-[#588ce4]/14 via-blue-50/20 to-transparent"
+                aria-hidden="true"
+              />
+
               {/* Centered Domain Header with Abstract Icon Above Heading */}
-              <div className="flex flex-col items-center justify-center text-center pt-2">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 flex items-center justify-center">
+              <div className="relative z-10 flex flex-col items-center justify-center text-center pt-2">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 flex items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-1">
                   <img
                     src={skillGroup.abstractIcon}
                     alt={`${skillGroup.category} abstract icon`}
@@ -151,16 +157,16 @@ export default function SkillsSection() {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-blue-600 transition-colors text-center px-2">
+                <h3 className="text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-[#2563eb] transition-colors text-center px-2">
                   {skillGroup.category}
                 </h3>
               </div>
 
               {/* Smooth Full-Width Horizontal Transition Line Above Marquee */}
-              <div className="w-full h-[1px] bg-slate-200/90 my-5" />
+              <div className="relative z-10 w-full h-[1px] bg-slate-200/90 my-5 transition-colors duration-300 group-hover:bg-[#588ce4]/30" />
 
               {/* Marquee Window: Individual Pause on Hover (Only This Domain Stops) */}
-              <div className="relative w-full overflow-hidden marquee-mask py-2">
+              <div className="relative z-10 w-full overflow-hidden marquee-mask py-2">
                 <div
                   className="domain-marquee-track flex flex-row flex-nowrap items-center w-max"
                   style={{
