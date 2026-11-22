@@ -14,41 +14,21 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20">
-      {/* Background Image: Left corner concentric fade from bottom */}
+      {/* Background Image: Complete bottom scene with Minecraft character & laptop, concentric upward fade */}
       <div 
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
         style={{
-          maskImage: "radial-gradient(ellipse 50% 100% at 0% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0) 80%)",
-          WebkitMaskImage: "radial-gradient(ellipse 50% 100% at 0% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0) 80%)",
+          maskImage: "radial-gradient(ellipse 95% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 95% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero-section-bg.webp"
-          alt=""
-          className="w-full h-full object-cover object-bottom"
+          alt="Footer Background"
+          className="w-full h-full object-cover"
           style={{
-            opacity: 0.7,
-            filter: "blur(2px)",
-            transform: "scale(1.05)",
-          }}
-        />
-      </div>
-
-      {/* Background Image: Right corner concentric fade from bottom */}
-      <div 
-        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
-        style={{
-          maskImage: "radial-gradient(ellipse 50% 100% at 100% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0) 80%)",
-          WebkitMaskImage: "radial-gradient(ellipse 50% 100% at 100% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0) 80%)",
-        }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/hero-section-bg.webp"
-          alt=""
-          className="w-full h-full object-cover object-bottom"
-          style={{
+            objectPosition: "55% 68%",
             opacity: 0.7,
             filter: "blur(2px)",
             transform: "scale(1.05)",
