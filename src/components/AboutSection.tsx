@@ -2,12 +2,11 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { BentoCard, BentoSubCard, BentoSectionHeader, BentoTag } from "@/components/ui/BentoCard";
-import { Trophy, Award, MapPin, Sparkles, ExternalLink, ShieldCheck, GraduationCap } from "lucide-react";
+import { BentoCard, BentoSubCard, BentoSectionHeader } from "@/components/ui/BentoCard";
+import { Trophy, Award, MapPin, ExternalLink } from "lucide-react";
 
 export default function AboutSection() {
-  const { personal, achievements, education, certifications } = portfolioData;
-  const nustEdu = education[0];
+  const { personal, achievements, certifications } = portfolioData;
 
   return (
     <section id="about" className="py-24 sm:py-32 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-20">
@@ -83,83 +82,8 @@ export default function AboutSection() {
           </div>
         </BentoCard>
 
-        {/* ROW 1: Card 2 - Key Impact Benchmarks (Col 5) */}
+        {/* ROW 1: Card 2 - Hackathon Honors (Col 5) - Neighboring Narrative Card */}
         <BentoCard className="lg:col-span-5 gap-5">
-          <div>
-            <span className="text-[11px] font-mono font-semibold text-slate-500 tracking-wider uppercase">
-              KEY TELEMETRY &amp; IMPACT
-            </span>
-            <h4 className="text-lg font-bold text-slate-900 font-sora mt-1">
-              Production Benchmarks
-            </h4>
-          </div>
-
-          <div className="grid grid-cols-1 gap-3.5">
-            <BentoSubCard className="flex items-center justify-between p-4">
-              <div className="flex flex-col">
-                <span className="text-3xl font-extrabold font-sora text-blue-600 tracking-tight">100%</span>
-                <span className="text-xs font-mono text-slate-600 font-medium mt-0.5">
-                  Routing Accuracy &amp; Sandbox Containment
-                </span>
-              </div>
-              <ShieldCheck className="w-8 h-8 text-blue-500/30 shrink-0" />
-            </BentoSubCard>
-
-            <BentoSubCard className="flex items-center justify-between p-4">
-              <div className="flex flex-col">
-                <span className="text-3xl font-extrabold font-sora text-amber-500 tracking-tight">2x</span>
-                <span className="text-xs font-mono text-slate-600 font-medium mt-0.5">
-                  AI Hackathon Champion (Code Connect &amp; NUST)
-                </span>
-              </div>
-              <Trophy className="w-8 h-8 text-amber-500/30 shrink-0" />
-            </BentoSubCard>
-
-            <BentoSubCard className="flex items-center justify-between p-4">
-              <div className="flex flex-col">
-                <span className="text-3xl font-extrabold font-sora text-emerald-600 tracking-tight">17.4M</span>
-                <span className="text-xs font-mono text-slate-600 font-medium mt-0.5">
-                  Parameters Fine-Tuned (Qwen3 LoRA SFT)
-                </span>
-              </div>
-              <Sparkles className="w-8 h-8 text-emerald-500/30 shrink-0" />
-            </BentoSubCard>
-          </div>
-        </BentoCard>
-
-        {/* ROW 2: Card 3 - Academic Foundation (Col 6) */}
-        <BentoCard className="lg:col-span-6 gap-5">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
-                ACADEMIC CREDENTIAL
-              </span>
-              <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200 text-[11px] font-mono font-bold">
-                {nustEdu.gpaOrGrade}
-              </span>
-            </div>
-            <h4 className="text-lg font-bold text-slate-900 font-sora">
-              {nustEdu.institution}
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 font-sans">
-              {nustEdu.degree} · <span className="font-mono text-slate-500">{nustEdu.period}</span>
-            </p>
-          </div>
-
-          <div className="pt-2">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block mb-2">
-              Core Coursework
-            </span>
-            <div className="flex flex-wrap gap-1.5">
-              {nustEdu.courses.slice(0, 7).map((course, idx) => (
-                <BentoTag key={idx}>{course}</BentoTag>
-              ))}
-            </div>
-          </div>
-        </BentoCard>
-
-        {/* ROW 2: Card 4 - Hackathon Honors (Col 6) */}
-        <BentoCard className="lg:col-span-6 gap-5">
           <div>
             <span className="text-[11px] font-mono font-semibold text-amber-600 tracking-wider uppercase">
               AWARDS &amp; RECOGNITION
@@ -190,7 +114,7 @@ export default function AboutSection() {
           </div>
         </BentoCard>
 
-        {/* ROW 3: Card 5 - Industry Certifications (Col 12) */}
+        {/* ROW 2: Card 3 - Industry Certifications (Col 12) */}
         <BentoCard className="lg:col-span-12 gap-5">
           <div>
             <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
