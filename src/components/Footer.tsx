@@ -13,13 +13,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20 min-h-[380px] sm:min-h-[460px] flex flex-col justify-end">
-      {/* Background Image: Complete bottom scene with Minecraft character & laptop, showing ~50% of image with late upward fade */}
+    <footer className="relative w-full overflow-hidden z-20 min-h-[380px] sm:min-h-[460px] flex flex-col justify-end">
+      {/* Background Image: Distinct concentric dome/circle fade radiating from bottom center */}
       <div 
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
         style={{
-          maskImage: "radial-gradient(ellipse 110% 120% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 82%, rgba(0,0,0,0) 100%)",
-          WebkitMaskImage: "radial-gradient(ellipse 110% 120% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 82%, rgba(0,0,0,0) 100%)",
+          maskImage: "radial-gradient(ellipse 75% 85% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 88%)",
+          WebkitMaskImage: "radial-gradient(ellipse 75% 85% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 88%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
