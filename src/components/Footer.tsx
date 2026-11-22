@@ -37,52 +37,45 @@ export default function Footer() {
       </div>
 
       <div className="pt-28 sm:pt-48 pb-10 sm:pb-16 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
-        <BentoCard hoverEffect={false} className="p-6 sm:p-10 flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
-        {/* Left: Brand Identity in Deltha */}
-        <div className="flex flex-col items-center md:items-start gap-1">
-          <div className="flex items-center gap-3">
+        <BentoCard hoverEffect={false} className="p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+          {/* Left: Brand Identity */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
             <span className="font-hero text-2xl sm:text-3xl font-bold tracking-wider text-slate-900">
               AZFAR
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-mono text-[10px] font-semibold border border-slate-200">
-              v2026
-            </span>
+            <p className="text-xs font-sans text-slate-500">
+              {personal.role} · NUST SEECS
+            </p>
           </div>
-          <p className="text-xs font-sans text-slate-500">
-            {personal.role} · NUST SEECS
-          </p>
-        </div>
 
-        {/* Center: Quick Nav in Sora */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-sora font-semibold text-slate-600">
-          <a href="#about" className="hover:text-blue-600 transition-colors">
-            About
-          </a>
-          <a href="#projects" className="hover:text-blue-600 transition-colors">
-            Projects
-          </a>
-          <a href="#skills" className="hover:text-blue-600 transition-colors">
-            Skills
-          </a>
-          <a href="#contact" className="hover:text-blue-600 transition-colors">
-            Contact
-          </a>
-        </div>
+          {/* Center: Quick Nav in Sora */}
+          <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs sm:text-[13px] font-sora font-semibold text-slate-600">
+            <a href="#about" className="hover:text-blue-600 transition-colors py-1">
+              About
+            </a>
+            <a href="#projects" className="hover:text-blue-600 transition-colors py-1">
+              Projects
+            </a>
+            <a href="#skills" className="hover:text-blue-600 transition-colors py-1">
+              Skills
+            </a>
+            <a href="#contact" className="hover:text-blue-600 transition-colors py-1">
+              Contact
+            </a>
+          </nav>
 
-        {/* Right: Telemetry & Back to Top */}
-        <div className="flex items-center gap-4">
-          <span className="hidden sm:inline-block text-[11px] font-mono text-slate-500">
-            © 2026 {personal.name}
-          </span>
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 hover:text-black hover:border-slate-400 shadow-xs font-mono text-xs font-semibold transition-all cursor-pointer"
-          >
-            <span>Top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      </BentoCard>
+          {/* Right: Back to Top */}
+          <div className="flex items-center">
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white border border-slate-200 text-slate-800 hover:text-black hover:border-slate-400 shadow-xs font-mono text-xs font-semibold transition-all active:scale-95 cursor-pointer"
+              aria-label="Scroll back to top"
+            >
+              <span>Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </BentoCard>
       </div>
     </footer>
   );
