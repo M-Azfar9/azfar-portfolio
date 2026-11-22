@@ -35,9 +35,6 @@ export default function QuantumNavbar() {
           <a href="#projects" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
             Projects
           </a>
-          <a href="#experience" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
-            Experience
-          </a>
           <a href="#skills" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
             Skills
           </a>
@@ -122,13 +119,6 @@ export default function QuantumNavbar() {
             className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
           >
             Projects
-          </a>
-          <a
-            href="#experience"
-            onClick={() => setMobileMenuOpen(false)}
-            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
-          >
-            Experience
           </a>
           <a
             href="#skills"

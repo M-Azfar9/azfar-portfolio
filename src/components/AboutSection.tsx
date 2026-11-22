@@ -48,7 +48,7 @@ export default function AboutSection() {
         </BentoCard>
 
         {/* ROW 1: Card 2 - Professional Experience (Col 6) */}
-        <BentoCard className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5">
+        <BentoCard id="experience" className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5">
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">

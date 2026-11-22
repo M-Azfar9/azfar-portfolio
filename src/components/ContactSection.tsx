@@ -18,7 +18,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="pt-24 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
-        eyebrow="05 // INITIATE CONTACT"
+        eyebrow="04 // INITIATE CONTACT"
         title="Let's Build Frontier Systems."
         description="Available for AI Engineering, Agentic Workflow, and Flutter Mobile development roles. Open to impactful projects, research collaborations, and full-time opportunities."
       />

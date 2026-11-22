@@ -54,15 +54,12 @@ export default function Footer() {
         </div>
 
         {/* Center: Quick Nav in Sora */}
-        <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-sora font-semibold text-slate-600">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs font-sora font-semibold text-slate-600">
           <a href="#about" className="hover:text-blue-600 transition-colors">
             About
           </a>
           <a href="#projects" className="hover:text-blue-600 transition-colors">
             Projects
-          </a>
-          <a href="#experience" className="hover:text-blue-600 transition-colors">
-            Experience
           </a>
           <a href="#skills" className="hover:text-blue-600 transition-colors">
             Skills
