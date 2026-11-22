@@ -69,7 +69,7 @@ export function BentoSectionHeader({
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/90 shadow-xs w-fit text-[11px] font-mono tracking-widest text-blue-700 font-semibold uppercase">
           <span>{eyebrow}</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 font-sora">
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-wide text-slate-900 font-hero">
           {title}
         </h2>
         {description && (
