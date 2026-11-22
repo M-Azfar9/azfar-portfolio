@@ -8,7 +8,7 @@ export default function SkillsSection() {
   const fullSkills = [
     {
       category: "Generative AI & LLM Systems",
-      abstractIcon: "/abstracts/ab1.webp",
+      abstractIcon: "/abstracts/geometry1.svg",
       items: [
         "LangGraph",
         "LangChain",
@@ -23,7 +23,7 @@ export default function SkillsSection() {
     },
     {
       category: "Fine-Tuning & Deep Learning",
-      abstractIcon: "/abstracts/ab2.webp",
+      abstractIcon: "/abstracts/geometry2.svg",
       items: [
         "PyTorch",
         "Hugging Face",
@@ -38,7 +38,7 @@ export default function SkillsSection() {
     },
     {
       category: "Mobile Development (Flutter & Dart)",
-      abstractIcon: "/abstracts/ab3.webp",
+      abstractIcon: "/abstracts/geometry3.svg",
       items: [
         "Flutter",
         "Dart",
@@ -54,7 +54,7 @@ export default function SkillsSection() {
     },
     {
       category: "Retrieval, Vector DBs & ML",
-      abstractIcon: "/abstracts/ab4.webp",
+      abstractIcon: "/abstracts/geometry4.svg",
       items: [
         "FAISS",
         "Qdrant",
@@ -69,7 +69,7 @@ export default function SkillsSection() {
     },
     {
       category: "Backend & Distributed Cloud",
-      abstractIcon: "/abstracts/ab5.webp",
+      abstractIcon: "/abstracts/geometry5.svg",
       items: [
         "Python",
         "FastAPI",
@@ -83,7 +83,7 @@ export default function SkillsSection() {
     },
     {
       category: "Evaluation, Observability & Ops",
-      abstractIcon: "/abstracts/ab6.webp",
+      abstractIcon: "/abstracts/geometry6.svg",
       items: [
         "LangSmith",
         "DeepEval",

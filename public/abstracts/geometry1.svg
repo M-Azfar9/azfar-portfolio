@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 191" width="192" height="191" fill="none">
+  <title>Orange rounded-square spiral</title>
+  <g stroke="#090d16" stroke-width="0.58" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="26.0000" y="25.5000" width="140.0000" height="140.0000" rx="5.2000" transform="rotate(-0.000 96.000 95.500)"/>
+    <rect x="30.2000" y="29.7000" width="131.6000" height="131.6000" rx="5.2000" transform="rotate(-5.500 96.000 95.500)"/>
+    <rect x="34.1480" y="33.6480" width="123.7040" height="123.7040" rx="5.2000" transform="rotate(-11.000 96.000 95.500)"/>
+    <rect x="37.8591" y="37.3591" width="116.2818" height="116.2818" rx="5.2000" transform="rotate(-16.500 96.000 95.500)"/>
+    <rect x="41.3476" y="40.8476" width="109.3049" height="109.3049" rx="4.9187" transform="rotate(-22.000 96.000 95.500)"/>
+    <rect x="44.6267" y="44.1267" width="102.7466" height="102.7466" rx="4.6236" transform="rotate(-27.500 96.000 95.500)"/>
+    <rect x="47.7091" y="47.2091" width="96.5818" height="96.5818" rx="4.3462" transform="rotate(-33.000 96.000 95.500)"/>
+    <rect x="50.6066" y="50.1066" width="90.7869" height="90.7869" rx="4.0854" transform="rotate(-38.500 96.000 95.500)"/>
+    <rect x="53.3302" y="52.8302" width="85.3397" height="85.3397" rx="3.8403" transform="rotate(-44.000 96.000 95.500)"/>
+    <rect x="55.8904" y="55.3904" width="80.2193" height="80.2193" rx="3.6099" transform="rotate(-49.500 96.000 95.500)"/>
+    <rect x="58.2969" y="57.7969" width="75.4061" height="75.4061" rx="3.3933" transform="rotate(-55.000 96.000 95.500)"/>
+    <rect x="60.5591" y="60.0591" width="70.8817" height="70.8817" rx="3.1897" transform="rotate(-60.500 96.000 95.500)"/>
+    <rect x="62.6856" y="62.1856" width="66.6288" height="66.6288" rx="2.9983" transform="rotate(-66.000 96.000 95.500)"/>
+    <rect x="64.6844" y="64.1844" width="62.6311" height="62.6311" rx="2.8184" transform="rotate(-71.500 96.000 95.500)"/>
+    <rect x="66.5634" y="66.0634" width="58.8732" height="58.8732" rx="2.6493" transform="rotate(-77.000 96.000 95.500)"/>
+    <rect x="68.3296" y="67.8296" width="55.3409" height="55.3409" rx="2.4903" transform="rotate(-82.500 96.000 95.500)"/>
+    <rect x="69.9898" y="69.4898" width="52.0204" height="52.0204" rx="2.3409" transform="rotate(-88.000 96.000 95.500)"/>
+    <rect x="71.5504" y="71.0504" width="48.8992" height="48.8992" rx="2.2005" transform="rotate(-93.500 96.000 95.500)"/>
+    <rect x="73.0174" y="72.5174" width="45.9652" height="45.9652" rx="2.0684" transform="rotate(-99.000 96.000 95.500)"/>
+    <rect x="74.3963" y="73.8963" width="43.2073" height="43.2073" rx="1.9443" transform="rotate(-104.500 96.000 95.500)"/>
+    <rect x="75.6926" y="75.1926" width="40.6149" height="40.6149" rx="1.8277" transform="rotate(-110.000 96.000 95.500)"/>
+    <rect x="76.9110" y="76.4110" width="38.1780" height="38.1780" rx="1.7180" transform="rotate(-115.500 96.000 95.500)"/>
+    <rect x="78.0563" y="77.5563" width="35.8873" height="35.8873" rx="1.6149" transform="rotate(-121.000 96.000 95.500)"/>
+    <rect x="79.1330" y="78.6330" width="33.7341" height="33.7341" rx="1.5180" transform="rotate(-126.500 96.000 95.500)"/>
+    <rect x="80.1450" y="79.6450" width="31.7100" height="31.7100" rx="1.4270" transform="rotate(-132.000 96.000 95.500)"/>
+    <rect x="81.0963" y="80.5963" width="29.8074" height="29.8074" rx="1.3413" transform="rotate(-137.500 96.000 95.500)"/>
+    <rect x="81.9905" y="81.4905" width="28.0190" height="28.0190" rx="1.2609" transform="rotate(-143.000 96.000 95.500)"/>
+    <rect x="82.8311" y="82.3311" width="26.3378" height="26.3378" rx="1.1852" transform="rotate(-148.500 96.000 95.500)"/>
+    <rect x="83.6212" y="83.1212" width="24.7576" height="24.7576" rx="1.1141" transform="rotate(-154.000 96.000 95.500)"/>
+    <rect x="84.3639" y="83.8639" width="23.2721" height="23.2721" rx="1.0472" transform="rotate(-159.500 96.000 95.500)"/>
+    <rect x="85.0621" y="84.5621" width="21.8758" height="21.8758" rx="0.9844" transform="rotate(-165.000 96.000 95.500)"/>
+    <rect x="85.7184" y="85.2184" width="20.5632" height="20.5632" rx="0.9253" transform="rotate(-170.500 96.000 95.500)"/>
+    <rect x="86.3353" y="85.8353" width="19.3294" height="19.3294" rx="0.8698" transform="rotate(-176.000 96.000 95.500)"/>
+    <rect x="86.9152" y="86.4152" width="18.1697" height="18.1697" rx="0.8176" transform="rotate(-181.500 96.000 95.500)"/>
+    <rect x="87.4603" y="86.9603" width="17.0795" height="17.0795" rx="0.7686" transform="rotate(-187.000 96.000 95.500)"/>
+    <rect x="87.9726" y="87.4726" width="16.0547" height="16.0547" rx="0.7225" transform="rotate(-192.500 96.000 95.500)"/>
+  </g>
+</svg>
