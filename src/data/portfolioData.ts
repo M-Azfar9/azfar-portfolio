@@ -8,6 +8,8 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
+  tagLabel?: string;
 }
 
 export interface Experience {
@@ -180,6 +182,8 @@ export const portfolioData: PortfolioData = {
       title: "Doxer AI: Codebase Intelligence Fabric",
       subtitle: "Hierarchical Multi-Agent System for Code Analysis, Documentation & SRS",
       category: "ai",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Agentic AI & LLMs",
       description: [
         "Engineered a hierarchical multi-agent system in Python with LangGraph, orchestrating bounded Technical QA, Documentation, and SRS subagents; achieved 100% cross-route accuracy.",
         "Built code-aware documentation generation with AST extraction and evidence-based grounding, improving document completeness from 91.7% to 100% with 86.7% grounding critic.",
@@ -195,6 +199,8 @@ export const portfolioData: PortfolioData = {
       title: "Qwen3 Function Calling: Parameter-Efficient Fine-Tuning",
       subtitle: "FP16 LoRA Fine-Tuning and Benchmarking of Tool-Calling LLMs",
       category: "ai",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "LLM Fine-Tuning",
       description: [
         "Fine-tuned Qwen3-1.7B using supervised fine-tuning (SFT) with FP16 LoRA on the Glaive Function Calling v2 dataset, training 17.4M parameters (1.0% of model).",
         "Engineered custom evaluation harness to measure JSON validity, tool-name accuracy, and exact argument matching against the base model.",
@@ -205,36 +211,12 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/M-Azfar9",
     },
     {
-      id: "forikaam",
-      title: "ForiKaam: Reverse-Auction Labor Marketplace",
-      subtitle: "Dual-App Mobile Marketplace with Real-Time Bidding & Offline Architecture",
-      category: "mobile",
-      description: [
-        "Built dual Flutter mobile applications for customers and workers with location-based requests, parameterized job postings, and real-time reverse-auction bidding.",
-        "Implemented feature-based clean architecture with Riverpod, Supabase real-time streams, Isar local caching, and offline action queuing.",
-        "Engineered secure Dio authentication layer with automated JWT token refresh and repository abstractions.",
-      ],
-      metrics: "Dual-App Architecture · Real-time Supabase Streams",
-      technologies: ["Flutter", "Dart", "Riverpod", "Supabase", "Isar", "Dio", "Firebase"],
-      githubUrl: "https://github.com/M-Azfar9",
-    },
-    {
-      id: "kmhub",
-      title: "KMHub: Islamic Super App",
-      subtitle: "Production Flutter Application with Real-Time Communication & AI Assistant",
-      category: "mobile",
-      description: [
-        "Built and shipped a live production mobile app for ZAM Studios combining real-time multimedia chat (text, video, audio, links), Quran with offline audio, and Hadith books.",
-        "Integrated AI-powered Islamic chatbot, scholar consulting features, Jamaat tracking, and precision prayer times with Firebase Cloud Messaging.",
-      ],
-      metrics: "Live on Google Play Store · Production App",
-      technologies: ["Flutter", "Dart", "Firebase", "REST APIs", "FCM", "AI Chatbot"],
-    },
-    {
       id: "sonyc-rag",
       title: "Sonyc: Production Multimodal RAG System",
       subtitle: "End-to-End Generative AI Document Intelligence Platform",
       category: "ai",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Multimodal RAG",
       description: [
         "Designed and deployed a full RAG system ingesting PDFs, GitHub repos, YouTube transcripts, and live web pages into a unified vector store.",
         "Utilized semantic chunking with BGE & Gemini embeddings and dual FAISS/ChromaDB indexing for ultra-fast vector retrieval.",
@@ -245,10 +227,42 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/M-Azfar9",
     },
     {
+      id: "kmhub",
+      title: "KMHub: Islamic Super App",
+      subtitle: "Production Flutter Application with Real-Time Communication & AI Assistant",
+      category: "mobile",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Consumer Mobile App",
+      description: [
+        "Built and shipped a live production mobile app for ZAM Studios combining real-time multimedia chat (text, video, audio, links), Quran with offline audio, and Hadith books.",
+        "Integrated AI-powered Islamic chatbot, scholar consulting features, Jamaat tracking, and precision prayer times with Firebase Cloud Messaging.",
+      ],
+      metrics: "Live on Google Play Store · Production App",
+      technologies: ["Flutter", "Dart", "Firebase", "REST APIs", "FCM", "AI Chatbot"],
+    },
+    {
+      id: "forikaam",
+      title: "ForiKaam: Reverse-Auction Labor Marketplace",
+      subtitle: "Dual-App Mobile Marketplace with Real-Time Bidding & Offline Architecture",
+      category: "mobile",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Marketplace Mobile",
+      description: [
+        "Built dual Flutter mobile applications for customers and workers with location-based requests, parameterized job postings, and real-time reverse-auction bidding.",
+        "Implemented feature-based clean architecture with Riverpod, Supabase real-time streams, Isar local caching, and offline action queuing.",
+        "Engineered secure Dio authentication layer with automated JWT token refresh and repository abstractions.",
+      ],
+      metrics: "Dual-App Architecture · Real-time Supabase Streams",
+      technologies: ["Flutter", "Dart", "Riverpod", "Supabase", "Isar", "Dio", "Firebase"],
+      githubUrl: "https://github.com/M-Azfar9",
+    },
+    {
       id: "ride-hailing",
       title: "Enterprise Ride-Hailing Platform",
       subtitle: "Multi-Role Transport Ecosystem for Intracity & Intercity Travel",
       category: "mobile",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Transport Platform",
       description: [
         "Developed cross-platform mobile system for ZAM Studios covering customer, driver, and fleet owner (multi-driver management) interfaces.",
         "Implemented real-time geolocation tracking with Google Maps SDK, role-based dashboards, and parcel/cargo delivery flows.",
@@ -261,6 +275,8 @@ export const portfolioData: PortfolioData = {
       title: "Cricket Score & Outcome Predictor",
       subtitle: "Supervised Machine Learning Regression & Classification Pipeline",
       category: "ml",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Predictive ML",
       description: [
         "Conducted end-to-end ML lifecycle: EDA, feature engineering, hyperparameter tuning, and cross-validation across six model variants.",
         "Deployed highest-performing ensemble model (CatBoost & XGBoost) as an interactive FastAPI prediction service.",
@@ -274,6 +290,8 @@ export const portfolioData: PortfolioData = {
       title: "Chest Infection Classification (Computer Vision)",
       subtitle: "Deep Learning Medical Image Diagnostics",
       category: "ml",
+      image: "/Projects-SS/Qwen Fine-Tuning.png",
+      tagLabel: "Medical Deep Learning",
       description: [
         "Fine-tuned VGG16 and ResNet50 convolutional networks via transfer learning on labeled chest X-ray datasets.",
         "Engineered robust data augmentation and class-imbalance solutions; evaluated rigorously using ROC-AUC, precision, recall, and F1-score.",
