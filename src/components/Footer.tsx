@@ -13,13 +13,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20">
-      {/* Background Image: Complete bottom scene with Minecraft character & laptop, concentric upward fade */}
+    <footer className="relative w-full border-t border-slate-200/80 overflow-hidden z-20 min-h-[380px] sm:min-h-[460px] flex flex-col justify-end">
+      {/* Background Image: Complete bottom scene with Minecraft character & laptop, showing ~50% of image with late upward fade */}
       <div 
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
         style={{
-          maskImage: "radial-gradient(ellipse 95% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
-          WebkitMaskImage: "radial-gradient(ellipse 95% 100% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)",
+          maskImage: "radial-gradient(ellipse 110% 120% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 82%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 110% 120% at 50% 100%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 82%, rgba(0,0,0,0) 100%)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -28,7 +28,7 @@ export default function Footer() {
           alt="Footer Background"
           className="w-full h-full object-cover"
           style={{
-            objectPosition: "55% 68%",
+            objectPosition: "55% 85%",
             opacity: 0.7,
             filter: "blur(2px)",
             transform: "scale(1.05)",
@@ -36,7 +36,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="py-14 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto relative z-10">
+      <div className="py-12 sm:py-16 px-6 sm:px-12 lg:px-16 max-w-[1360px] mx-auto w-full relative z-10">
         <BentoCard className="p-8 sm:p-10 flex-col md:flex-row items-center justify-between gap-8">
         {/* Left: Brand Identity in Deltha */}
         <div className="flex flex-col items-center md:items-start gap-1">
