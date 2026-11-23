@@ -2,7 +2,7 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { BentoCard, BentoSubCard, BentoSectionHeader } from "@/components/ui/BentoCard";
+import { BentoCard, BentoSectionHeader } from "@/components/ui/BentoCard";
 import { Briefcase, Smartphone, ShieldCheck, GitBranch } from "lucide-react";
 
 export default function AboutSection() {
@@ -46,14 +46,19 @@ export default function AboutSection() {
           </div>
         </BentoCard>
 
-        {/* ROW 1: Card 2 - Professional Experience (Col 6) */}
-        <BentoCard id="experience" className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5">
+        {/* ROW 1: Card 2 - Professional Experience (Col 6) with Reflective Bokeh Hover State */}
+        <BentoCard
+          id="experience"
+          variant="highlight"
+          hoverEffect={true}
+          className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5"
+        >
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
                 PROFESSIONAL EXPERIENCE
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 text-[11px] font-mono font-medium">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-blue-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
                 {currentRole.period}
               </span>
             </div>
@@ -70,27 +75,34 @@ export default function AboutSection() {
               </p>
             </div>
 
+            {/* 3 Inner Border Cards reflecting the outer bokeh hover effect */}
             <div className="flex flex-col gap-2.5 pt-2">
-              <BentoSubCard className="flex items-center gap-3 p-3.5">
-                <Smartphone className="w-4 h-4 text-blue-600 shrink-0" />
+              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                  <Smartphone className="w-4 h-4" />
+                </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
                   Build Mobile Architecture &amp; Real-Time Systems
                 </span>
-              </BentoSubCard>
+              </div>
 
-              <BentoSubCard className="flex items-center gap-3 p-3.5">
-                <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
+              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
                   Integrate Generative AI &amp; LLM with Jailbreaking
                 </span>
-              </BentoSubCard>
+              </div>
 
-              <BentoSubCard className="flex items-center gap-3 p-3.5">
-                <GitBranch className="w-4 h-4 text-blue-600 shrink-0" />
+              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                  <GitBranch className="w-4 h-4" />
+                </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
                   Distributed Collaboration &amp; CI/CD
                 </span>
-              </BentoSubCard>
+              </div>
             </div>
           </div>
         </BentoCard>
