@@ -1,32 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { portfolioData, Project } from "@/data/portfolioData";
-import { BentoSectionHeader, BentoTag } from "@/components/ui/BentoCard";
-import { ArrowUpRight, CheckCircle2, ChevronDown, ChevronUp, X, Sparkles, Smartphone, Brain, Layers } from "lucide-react";
+import React, { useState } from "react";
+import Link from "next/link";
+import { portfolioData } from "@/data/portfolioData";
+import { BentoSectionHeader } from "@/components/ui/BentoCard";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function ProjectsSection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  // Close modal on Escape key and prevent background scroll
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setSelectedProject(null);
-      }
-    };
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [selectedProject]);
 
   const allProjects = portfolioData.projects;
 
@@ -38,8 +19,8 @@ export default function ProjectsSection() {
   // Soft curated background tints matching modern studio showcase aesthetic
   const getCanvasTint = (idx: number) => {
     const tints = [
-      "bg-[#f6f3eb]", // Soft warm bone / cream (like ImagineArt Ad Studio)
-      "bg-[#e8edf2]", // Soft cool slate-blue (like ImagineArt Captions)
+      "bg-[#f6f3eb]", // Soft warm bone / cream
+      "bg-[#e8edf2]", // Soft cool slate-blue
       "bg-[#ebf2ed]", // Soft sage tint
       "bg-[#f3edf5]", // Soft lavender tint
       "bg-[#f5f2eb]",
@@ -67,7 +48,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         title="Featured Systems & Projects"
-        description="A showcase of systems I've built-from multi-agent workflows and local RAG search engines to production-ready Flutter mobile applications."
+        description="A showcase of systems I've built—from multi-agent workflows and local RAG search engines to production-ready Flutter mobile applications."
       />
 
       {/* 2-Column Showcase Grid */}
@@ -76,10 +57,10 @@ export default function ProjectsSection() {
           const canvasBg = getCanvasTint(idx);
 
           return (
-            <div
+            <Link
               key={project.id}
-              className="rounded-3xl sm:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer"
-              onClick={() => setSelectedProject(project)}
+              href={`/projects/${project.id}`}
+              className="rounded-3xl sm:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white shadow-xs hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col group cursor-pointer"
             >
               {/* Showcase Image Stage */}
               <div
@@ -115,20 +96,13 @@ export default function ProjectsSection() {
                     {project.tagLabel || getCategoryLabel(project.category)}
                   </span>
 
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedProject(project);
-                    }}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-slate-800 hover:text-black transition-colors cursor-pointer group/btn"
-                  >
+                  <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-slate-800 group-hover:text-black transition-colors">
                     <span>Details</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                  </button>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -152,133 +126,6 @@ export default function ProjectsSection() {
               </>
             )}
           </button>
-        </div>
-      )}
-
-      {/* Detailed Project Slide-Over Glass Sheet */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
-          {/* Frosted Glass Backdrop */}
-          <div
-            className="fixed inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity duration-300 animate-in fade-in cursor-pointer"
-            onClick={() => setSelectedProject(null)}
-            aria-hidden="true"
-          />
-
-          {/* Slide-Over Panel */}
-          <aside
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="project-sheet-title"
-            className="fixed inset-y-0 right-0 w-full max-w-[560px] sm:max-w-[620px] bg-white/95 backdrop-blur-2xl border-l border-slate-200/90 shadow-2xl flex flex-col justify-between z-50 animate-in slide-in-from-right duration-300 ease-out"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Sticky Header Bar */}
-            <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center justify-between gap-4 sticky top-0 bg-white/80 backdrop-blur-md z-10">
-              <div className="flex items-center gap-2">
-                <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-mono text-xs font-semibold">
-                  {selectedProject.tagLabel || getCategoryLabel(selectedProject.category)}
-                </span>
-                {selectedProject.metrics && (
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[11px] font-medium hidden sm:inline-block">
-                    {selectedProject.metrics}
-                  </span>
-                )}
-              </div>
-
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-black flex items-center justify-center transition-all active:scale-95 cursor-pointer shadow-2xs"
-                aria-label="Close project panel"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Scrollable Project Body */}
-            <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-6">
-              {/* Image Showcase Stage with neutral slate tint */}
-              <div className="w-full h-56 sm:h-72 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-center p-4 sm:p-6 overflow-hidden shadow-2xs">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={encodeURI(selectedProject.image || "/Projects-SS/qwen-fine-tuning.png")}
-                  alt={selectedProject.title}
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    if (!target.src.includes("Qwen%20Fine-Tuning.png")) {
-                      target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
-                    }
-                  }}
-                  className="max-h-full max-w-full object-contain rounded-xl shadow-sm"
-                />
-              </div>
-
-              {/* Title & Subtitle */}
-              <div className="space-y-1.5">
-                <h3 id="project-sheet-title" className="text-2xl sm:text-3xl font-bold text-slate-900 font-sora tracking-tight leading-snug">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
-                  {selectedProject.subtitle}
-                </p>
-              </div>
-
-              {/* Key Deliverables & System Highlights */}
-              <div className="space-y-3 pt-2">
-                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
-                  System Highlights &amp; Architecture
-                </h4>
-                <ul className="space-y-2.5">
-                  {selectedProject.description.map((bullet, idx) => (
-                    <li
-                      key={idx}
-                      className="text-xs sm:text-sm text-slate-700 font-sans flex items-start gap-3 leading-relaxed"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-slate-900 mt-0.5 shrink-0" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Tech Stack */}
-              <div className="space-y-3 pt-4 border-t border-slate-100">
-                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
-                  Technologies &amp; Frameworks
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech) => (
-                    <BentoTag key={tech}>{tech}</BentoTag>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Sticky Bottom Action Bar */}
-            <div className="p-4 sm:p-6 border-t border-slate-100 bg-white/90 backdrop-blur-md flex items-center justify-between gap-3">
-              <div className="text-xs font-mono text-slate-400 hidden sm:block">
-                Press <kbd className="px-1.5 py-0.5 rounded-sm bg-slate-100 border border-slate-200 text-slate-700 text-[10px]">ESC</kbd> to close
-              </div>
-              {selectedProject.githubUrl && (
-                <a
-                  href={selectedProject.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black text-white text-xs font-mono font-semibold hover:bg-neutral-800 active:scale-95 transition-all shadow-md cursor-pointer ml-auto"
-                >
-                  <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    />
-                  </svg>
-                  <span>View Source Code</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
-              )}
-            </div>
-          </aside>
         </div>
       )}
     </section>
