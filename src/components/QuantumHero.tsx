@@ -47,33 +47,17 @@ export default function QuantumHero() {
             <span>{personal.eyebrow}</span>
           </div>
 
-          {/* Main Title using Deltha Font with Ultra-Bold Weight and Specular Light Shimmer */}
+          {/* Main Title using Deltha Font with Ultra-Bold Weight */}
           <div className="flex flex-col">
-            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase select-none">
+            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase">
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-1 relative block">
-                  <span className="hero-ultra-bold block text-black font-black">
-                    MUHAMMAD
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="hero-ultra-bold hero-shimmer-sheen absolute inset-0 block select-none pointer-events-none"
-                  >
-                    MUHAMMAD
-                  </span>
+                <span className="hero-title-line-1 hero-ultra-bold block text-black font-black">
+                  MUHAMMAD
                 </span>
               </span>
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-2 relative block">
-                  <span className="hero-ultra-bold block text-black font-black">
-                    AZFAR
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="hero-ultra-bold hero-shimmer-sheen absolute inset-0 block select-none pointer-events-none"
-                  >
-                    AZFAR
-                  </span>
+                <span className="hero-title-line-2 hero-ultra-bold block text-black font-black">
+                  AZFAR
                 </span>
               </span>
             </h1>
@@ -95,7 +79,7 @@ export default function QuantumHero() {
               href={personal.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button font-inter font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer shadow-lg group hover:-translate-y-0.5 active:scale-[0.96] transition-all duration-200"
+              className="glow-button font-inter font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer shadow-lg active:scale-95 transition-all duration-200 group"
             >
               <span>Resume</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -103,7 +87,7 @@ export default function QuantumHero() {
 
             <a
               href="#contact"
-              className="rounded-full border-2 border-black bg-transparent text-black font-inter font-bold text-xs sm:text-sm px-8 py-3.5 flex items-center justify-center cursor-pointer hover:bg-black hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.96] transition-all duration-200"
+              className="rounded-full border-2 border-black bg-transparent text-black font-inter font-bold text-xs sm:text-sm px-8 py-3.5 flex items-center justify-center cursor-pointer hover:bg-black hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-200 ease-out"
             >
               Contact Me
             </a>
@@ -123,11 +107,10 @@ export default function QuantumHero() {
       {/* Right margin pagination dots with smooth active stretch & hover transition */}
       <div className="fixed right-6 sm:right-10 top-1/2 -translate-y-1/2 z-30 hidden sm:flex flex-col items-center gap-3">
         <a href="#" className="w-2.5 h-6 rounded-full bg-black shadow-md transition-all duration-300" aria-label="Hero" />
-        <a href="#about" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-4 active:scale-90 transition-all duration-200 cursor-pointer" aria-label="About" />
-        <a href="#projects" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-4 active:scale-90 transition-all duration-200 cursor-pointer" aria-label="Projects" />
-        <a href="#experience" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-4 active:scale-90 transition-all duration-200 cursor-pointer" aria-label="Experience" />
-        <a href="#skills" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-4 active:scale-90 transition-all duration-200 cursor-pointer" aria-label="Skills" />
-        <a href="#contact" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-4 active:scale-90 transition-all duration-200 cursor-pointer" aria-label="Contact" />
+        <a href="#about" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-5 active:scale-90 transition-all duration-300 ease-out cursor-pointer" aria-label="About" />
+        <a href="#projects" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-5 active:scale-90 transition-all duration-300 ease-out cursor-pointer" aria-label="Projects" />
+        <a href="#skills" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-5 active:scale-90 transition-all duration-300 ease-out cursor-pointer" aria-label="Skills" />
+        <a href="#contact" className="w-2 h-2 rounded-full bg-black/35 hover:bg-black hover:h-5 active:scale-90 transition-all duration-300 ease-out cursor-pointer" aria-label="Contact" />
       </div>
     </section>
 
