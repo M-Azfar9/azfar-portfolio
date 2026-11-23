@@ -81,7 +81,7 @@ export const portfolioData: PortfolioData = {
     github: "https://github.com/M-Azfar9",
     linkedin: "https://www.linkedin.com/in/muhammad-azfar-687304288",
     resumeUrl: "/resume.pdf",
-    status: "NUST SEECS · Open for Opportunities",
+    status: "NUST · Open for Opportunities",
     bio: "Python and AI Engineer & Flutter Developer (Software Engineering undergraduate at NUST, Islamabad) building production-oriented Generative AI systems and scalable cross-platform mobile apps. Hands-on expertise in LangGraph, LangChain, MCP, RAG architectures, LLM evaluation (LangSmith, DeepEval), fine-tuning (LoRA/PEFT), and enterprise Flutter development.",
   },
 
@@ -89,7 +89,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Winner",
       event: "Code Connect 2025 AI Hackathon",
-      organization: "NUST SEECS",
+      organization: "NUST",
       detail: "1st place among 20+ teams across universities, delivering a production-ready AI solution under intense competition pressure.",
     },
     {

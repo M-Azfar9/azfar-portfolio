@@ -30,7 +30,7 @@ export default function AboutSection() {
                 ENGINEERING PROFILE
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-blue-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
-                NUST SEECS
+                NUST
               </span>
             </div>
 

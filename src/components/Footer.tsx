@@ -21,7 +21,7 @@ export default function Footer() {
             AZFAR
           </span>
           <p className="text-xs font-sans text-slate-500">
-            {personal.role} · NUST SEECS
+            {personal.role} · NUST
           </p>
         </div>
 
