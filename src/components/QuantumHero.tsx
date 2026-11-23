@@ -47,16 +47,16 @@ export default function QuantumHero() {
             <span>{personal.eyebrow}</span>
           </div>
 
-          {/* Main Title using Deltha Font with Masked Line-Slide Reveal */}
+          {/* Main Title using Deltha Font with Ultra-Bold Weight */}
           <div className="flex flex-col">
-            <h1 className="font-hero text-3xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[80px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.96] uppercase quantum-title-glow">
+            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase">
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-1 hero-name-regular block text-transparent bg-clip-text bg-gradient-to-b from-[#18181b] to-[#3f3f46]">
+                <span className="hero-title-line-1 hero-ultra-bold block text-black font-black">
                   MUHAMMAD
                 </span>
               </span>
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-2 hero-name-bold block text-transparent bg-clip-text bg-gradient-to-b from-[#18181b] to-[#3f3f46]">
+                <span className="hero-title-line-2 hero-ultra-bold block text-black font-black">
                   AZFAR
                 </span>
               </span>
