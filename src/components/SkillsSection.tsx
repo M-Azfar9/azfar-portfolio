@@ -137,7 +137,7 @@ export default function SkillsSection() {
           return (
             <BentoCard
               key={idx}
-              className="domain-bento-card relative flex flex-col justify-between p-5 sm:p-8 overflow-hidden group cursor-pointer transition-all duration-300 hover:border-[#588ce4]/60 hover:shadow-[0_16px_36px_-6px_rgba(88,140,228,0.12)]"
+              className="domain-bento-card relative flex flex-col justify-between p-5 sm:p-8 overflow-hidden group cursor-pointer transition-all duration-300 hover:border-slate-400 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.10)]"
             >
               {/* Centered Domain Header with Abstract Icon Above Heading */}
               <div className="relative z-10 flex flex-col items-center justify-center text-center pt-2">
@@ -150,13 +150,13 @@ export default function SkillsSection() {
                   />
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-[#2563eb] transition-colors text-center px-1 sm:px-2">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-black transition-colors text-center px-1 sm:px-2">
                   {skillGroup.category}
                 </h3>
               </div>
 
               {/* Smooth Full-Width Horizontal Transition Line Above Marquee */}
-              <div className="relative z-10 w-full h-[1px] bg-slate-200/90 my-5 transition-colors duration-300 group-hover:bg-[#588ce4]/30" />
+              <div className="relative z-10 w-full h-[1px] bg-slate-200/90 my-5 transition-colors duration-300 group-hover:bg-slate-400/40" />
 
               {/* Marquee Window: Individual Pause on Hover (Only This Domain Stops) */}
               <div className="relative z-10 w-full overflow-hidden marquee-mask py-2">

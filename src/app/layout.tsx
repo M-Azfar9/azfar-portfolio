@@ -63,7 +63,7 @@ export default function RootLayout({
       lang="en"
       className={`${deltha.variable} ${sora.variable} ${geist.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#f8fafc] text-[#090d16] overflow-x-hidden selection:bg-blue-600/20 selection:text-blue-900">
+      <body className="min-h-full flex flex-col font-sans bg-[#f8fafc] text-[#090d16] overflow-x-hidden selection:bg-slate-900 selection:text-white">
         {children}
       </body>
     </html>

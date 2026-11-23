@@ -26,22 +26,22 @@ export default function AboutSection() {
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
+              <span className="text-[11px] font-mono font-semibold text-slate-800 tracking-wider uppercase">
                 ENGINEERING PROFILE
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-blue-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-slate-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
                 NUST
               </span>
             </div>
 
             <div>
               <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-blue-600 shrink-0" />
+                <User className="w-5 h-5 text-slate-900 shrink-0" />
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sora tracking-tight">
                   About Me
                 </h3>
               </div>
-              <p className="text-sm font-mono font-semibold text-blue-600 mt-1">
+              <p className="text-sm font-mono font-semibold text-slate-600 mt-1">
                 {personal.role}
               </p>
             </div>
@@ -76,22 +76,22 @@ export default function AboutSection() {
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-mono font-semibold text-blue-700 tracking-wider uppercase">
+              <span className="text-[11px] font-mono font-semibold text-slate-800 tracking-wider uppercase">
                 PROFESSIONAL EXPERIENCE
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-blue-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-slate-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
                 {currentRole.period}
               </span>
             </div>
 
             <div>
               <div className="flex items-center gap-2">
-                <Briefcase className="w-5 h-5 text-blue-600 shrink-0" />
+                <Briefcase className="w-5 h-5 text-slate-900 shrink-0" />
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sora tracking-tight">
                   {currentRole.role}
                 </h3>
               </div>
-              <p className="text-sm font-mono font-semibold text-blue-600 mt-1">
+              <p className="text-sm font-mono font-semibold text-slate-600 mt-1">
                 {currentRole.company}
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
             {/* 3 Inner Border Cards reflecting the outer bokeh hover effect */}
             <div className="flex flex-col gap-2.5 pt-2">
               <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
                   <Smartphone className="w-4 h-4" />
                 </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
@@ -108,7 +108,7 @@ export default function AboutSection() {
               </div>
 
               <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
@@ -117,7 +117,7 @@ export default function AboutSection() {
               </div>
 
               <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
                   <GitBranch className="w-4 h-4" />
                 </div>
                 <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">

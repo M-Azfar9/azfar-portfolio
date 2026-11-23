@@ -82,7 +82,7 @@ export default function ContactSection() {
               </span>
               <a
                 href={`mailto:${personal.email}`}
-                className="text-sm sm:text-base font-mono font-semibold text-slate-900 hover:text-blue-600 transition-colors truncate block"
+                className="text-sm sm:text-base font-mono font-semibold text-slate-900 hover:text-black transition-colors truncate block"
                 title={personal.email}
               >
                 {personal.email}
@@ -95,7 +95,7 @@ export default function ContactSection() {
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative group/inner flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-blue-400 hover:shadow-md transition-all duration-300 cursor-pointer"
+            className="relative group/inner flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-500 hover:shadow-md transition-all duration-300 cursor-pointer"
           >
             <div className="flex items-center justify-between gap-3 mb-4">
               <div className="w-11 h-11 rounded-xl bg-[#0a66c2] text-white flex items-center justify-center shrink-0 shadow-xs">
@@ -106,7 +106,7 @@ export default function ContactSection() {
                   />
                 </svg>
               </div>
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 group-hover/inner:text-blue-600 transition-colors">
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 group-hover/inner:text-black transition-colors">
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover/inner:translate-x-0.5 group-hover/inner:-translate-y-0.5" />
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function ContactSection() {
               <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block mb-0.5">
                 PROFESSIONAL NETWORK
               </span>
-              <h4 className="text-sm sm:text-base font-bold text-slate-900 font-sora group-hover/inner:text-blue-600 transition-colors">
+              <h4 className="text-sm sm:text-base font-bold text-slate-900 font-sora group-hover/inner:text-black transition-colors">
                 LinkedIn Connection
               </h4>
               <span className="text-xs font-mono text-slate-500">
@@ -148,7 +148,7 @@ export default function ContactSection() {
               <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block mb-0.5">
                 SOURCE CODE
               </span>
-              <h4 className="text-sm sm:text-base font-bold text-slate-900 font-sora group-hover/inner:text-blue-600 transition-colors">
+              <h4 className="text-sm sm:text-base font-bold text-slate-900 font-sora group-hover/inner:text-black transition-colors">
                 GitHub Profile
               </h4>
               <span className="text-xs font-mono text-slate-500">

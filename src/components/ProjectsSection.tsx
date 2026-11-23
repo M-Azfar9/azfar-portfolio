@@ -102,7 +102,7 @@ export default function ProjectsSection() {
               {/* Bottom Metadata Bar */}
               <div className="p-5 sm:p-8 flex flex-col justify-between gap-3 sm:gap-4 bg-white flex-1">
                 <div className="space-y-1 sm:space-y-2">
-                  <h3 className="text-lg sm:text-2xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-bold text-slate-900 font-sora tracking-tight group-hover:text-black transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500 font-sans leading-relaxed line-clamp-1 truncate">
@@ -121,7 +121,7 @@ export default function ProjectsSection() {
                       e.stopPropagation();
                       setSelectedProject(project);
                     }}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-blue-600 hover:text-blue-800 transition-colors cursor-pointer group/btn"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-slate-800 hover:text-black transition-colors cursor-pointer group/btn"
                   >
                     <span>Details</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
                   {selectedProject.tagLabel || getCategoryLabel(selectedProject.category)}
                 </span>
                 {selectedProject.metrics && (
-                  <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200 font-semibold">
+                  <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-semibold">
                     {selectedProject.metrics}
                   </span>
                 )}
@@ -221,7 +221,7 @@ export default function ProjectsSection() {
                     key={idx}
                     className="text-xs sm:text-sm text-slate-700 font-sans flex items-start gap-2.5 leading-relaxed"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-slate-900 mt-0.5 shrink-0" />
                     <span>{bullet}</span>
                   </li>
                 ))}
