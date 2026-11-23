@@ -47,17 +47,33 @@ export default function QuantumHero() {
             <span>{personal.eyebrow}</span>
           </div>
 
-          {/* Main Title using Deltha Font with Ultra-Bold Weight */}
+          {/* Main Title using Deltha Font with Ultra-Bold Weight and Specular Light Shimmer */}
           <div className="flex flex-col">
-            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase">
+            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase select-none">
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-1 hero-ultra-bold block text-black font-black">
-                  MUHAMMAD
+                <span className="hero-title-line-1 relative block">
+                  <span className="hero-ultra-bold block text-black font-black">
+                    MUHAMMAD
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="hero-ultra-bold hero-shimmer-sheen absolute inset-0 block select-none pointer-events-none"
+                  >
+                    MUHAMMAD
+                  </span>
                 </span>
               </span>
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-2 hero-ultra-bold block text-black font-black">
-                  AZFAR
+                <span className="hero-title-line-2 relative block">
+                  <span className="hero-ultra-bold block text-black font-black">
+                    AZFAR
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="hero-ultra-bold hero-shimmer-sheen absolute inset-0 block select-none pointer-events-none"
+                  >
+                    AZFAR
+                  </span>
                 </span>
               </span>
             </h1>
@@ -79,7 +95,7 @@ export default function QuantumHero() {
               href={personal.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-button font-inter font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer shadow-lg group"
+              className="glow-button font-inter font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full flex items-center justify-center gap-2 cursor-pointer shadow-lg group hover:-translate-y-0.5 active:scale-[0.96] transition-all duration-200"
             >
               <span>Resume</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -87,7 +103,7 @@ export default function QuantumHero() {
 
             <a
               href="#contact"
-              className="rounded-full border-2 border-black bg-transparent text-black font-inter font-bold text-xs sm:text-sm px-8 py-3.5 flex items-center justify-center cursor-pointer hover:bg-black hover:text-white active:scale-95 transition-all duration-200"
+              className="rounded-full border-2 border-black bg-transparent text-black font-inter font-bold text-xs sm:text-sm px-8 py-3.5 flex items-center justify-center cursor-pointer hover:bg-black hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-[0.96] transition-all duration-200"
             >
               Contact Me
             </a>

@@ -312,3 +312,39 @@ button, a, input, select, textarea {
   }
 }
 
+/* Specular Shimmer Sheen for Headline */
+@keyframes heroShimmerGlint {
+  0% {
+    background-position: -250% 0;
+  }
+  38%, 100% {
+    background-position: 250% 0;
+  }
+}
+
+.hero-shimmer-sheen {
+  background: linear-gradient(
+    115deg,
+    transparent 15%,
+    rgba(255, 255, 255, 0.95) 48%,
+    rgba(255, 255, 255, 0.45) 54%,
+    transparent 78%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0 transparent !important;
+  text-shadow: none !important;
+  animation: heroShimmerGlint 6.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-shimmer-sheen {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
