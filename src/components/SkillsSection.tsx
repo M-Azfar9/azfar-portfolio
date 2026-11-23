@@ -116,7 +116,7 @@ export default function SkillsSection() {
 
       <BentoSectionHeader
         title="Technical Architecture Matrix"
-        description="Continuous horizontal marquee stream across Generative AI systems, model fine-tuning, enterprise mobile engineering, and distributed cloud infrastructure."
+        description="Core technologies, frameworks, and developer tools I work with across AI engineering, deep learning, mobile development, and cloud infrastructure."
       />
 
       {/* 6-Card Responsive Bento Matrix with Independent Auto-Scrolling Marquees */}

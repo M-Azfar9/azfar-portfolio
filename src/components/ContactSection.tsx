@@ -21,7 +21,7 @@ export default function ContactSection() {
     <section id="contact" className="pt-20 sm:pt-28 lg:pt-36 pb-8 sm:pb-12 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-10">
       <BentoSectionHeader
         title="Let's Build Frontier Systems."
-        description="Available for AI Engineering, Agentic Workflow, and Flutter Mobile development roles. Open to impactful projects, research collaborations, and full-time opportunities."
+        description="I'm always open to discussing new opportunities, technical collaborations, or impactful engineering challenges. Feel free to reach out directly."
       />
 
       {/* Main Unified Contact Card with Hover Bokeh Background */}
@@ -37,7 +37,7 @@ export default function ContactSection() {
               Contact Me
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 font-sans mt-1">
-              Direct access channels for engineering roles, technical consultations, and collaborations.
+              Direct channels to get in touch for engineering roles, technical consultations, or project collaborations.
             </p>
           </div>
         </div>

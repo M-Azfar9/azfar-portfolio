@@ -13,7 +13,7 @@ export default function AboutSection() {
     <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         title="About & Engineering Vision"
-        description="Bridging cutting-edge Generative AI research with high-performance, production-ready mobile and distributed systems."
+        description="How I approach software engineering: combining practical AI agents and LLM workflows with solid mobile architecture to solve real-world problems."
       />
 
       {/* 12-Column Balanced Bento Grid with Equal Height Cards */}
