@@ -168,7 +168,7 @@ export const portfolioData: PortfolioData = {
         "Python (Async, Pydantic)",
         "PostgreSQL",
         "MongoDB",
-        "AWS (EC2)",
+        "AWS",
         "Docker",
         "Git & GitHub Actions (CI/CD)",
         "Vercel",

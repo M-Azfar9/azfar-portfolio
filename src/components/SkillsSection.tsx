@@ -76,7 +76,7 @@ export default function SkillsSection() {
         "Docker",
         "PostgreSQL",
         "MongoDB",
-        "AWS (EC2)",
+        "AWS",
         "Git",
         "Linux",
       ],
