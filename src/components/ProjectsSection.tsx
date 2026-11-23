@@ -67,7 +67,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-[1360px] mx-auto relative z-20">
       <BentoSectionHeader
         title="Featured Systems & Projects"
-        description="A showcase of systems I've built—from multi-agent workflows and local RAG search engines to production-ready Flutter mobile applications."
+        description="A showcase of systems I've built-from multi-agent workflows and local RAG search engines to production-ready Flutter mobile applications."
       />
 
       {/* 2-Column Showcase Grid */}
@@ -123,7 +123,7 @@ export default function ProjectsSection() {
                     }}
                     className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-blue-600 hover:text-blue-800 transition-colors cursor-pointer group/btn"
                   >
-                    <span>See Project in Details</span>
+                    <span>Details</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </button>
                 </div>
