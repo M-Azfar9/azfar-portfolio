@@ -25,18 +25,30 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Center: Quick Nav in Sora */}
-        <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs sm:text-[13px] font-sora font-semibold text-slate-600">
-          <a href="#about" className="hover:text-blue-600 transition-colors py-1">
+        {/* Center: Quick Nav in Sora with Floating Frosted Glass Capsule Card on Hover */}
+        <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-[13px] font-sora font-semibold text-slate-800">
+          <a
+            href="#about"
+            className="px-3.5 sm:px-4 py-1.5 rounded-full text-slate-800 font-semibold border border-transparent transition-all duration-200 ease-out hover:bg-white/95 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             About
           </a>
-          <a href="#projects" className="hover:text-blue-600 transition-colors py-1">
+          <a
+            href="#projects"
+            className="px-3.5 sm:px-4 py-1.5 rounded-full text-slate-800 font-semibold border border-transparent transition-all duration-200 ease-out hover:bg-white/95 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Projects
           </a>
-          <a href="#skills" className="hover:text-blue-600 transition-colors py-1">
+          <a
+            href="#skills"
+            className="px-3.5 sm:px-4 py-1.5 rounded-full text-slate-800 font-semibold border border-transparent transition-all duration-200 ease-out hover:bg-white/95 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Skills
           </a>
-          <a href="#contact" className="hover:text-blue-600 transition-colors py-1">
+          <a
+            href="#contact"
+            className="px-3.5 sm:px-4 py-1.5 rounded-full text-slate-800 font-semibold border border-transparent transition-all duration-200 ease-out hover:bg-white/95 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Contact
           </a>
         </nav>

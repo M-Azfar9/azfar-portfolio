@@ -27,18 +27,30 @@ export default function QuantumNavbar() {
           </span>
         </a>
 
-        {/* Desktop Nav Links in pure black with bold weight */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs sm:text-[13px] font-bold tracking-wide text-black">
-          <a href="#about" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
+        {/* Desktop Nav Links with Floating Frosted Glass Capsule Card on Hover */}
+        <nav className="hidden lg:flex items-center gap-1.5 text-xs sm:text-[13px] font-bold tracking-wide text-black">
+          <a
+            href="#about"
+            className="relative px-4 py-1.5 rounded-full text-black font-bold tracking-wide border border-transparent transition-all duration-200 ease-out hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             About
           </a>
-          <a href="#projects" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
+          <a
+            href="#projects"
+            className="relative px-4 py-1.5 rounded-full text-black font-bold tracking-wide border border-transparent transition-all duration-200 ease-out hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Projects
           </a>
-          <a href="#skills" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
+          <a
+            href="#skills"
+            className="relative px-4 py-1.5 rounded-full text-black font-bold tracking-wide border border-transparent transition-all duration-200 ease-out hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Skills
           </a>
-          <a href="#contact" className="text-black hover:text-blue-600 transition-colors cursor-pointer">
+          <a
+            href="#contact"
+            className="relative px-4 py-1.5 rounded-full text-black font-bold tracking-wide border border-transparent transition-all duration-200 ease-out hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+          >
             Contact
           </a>
         </nav>
@@ -109,28 +121,28 @@ export default function QuantumNavbar() {
           <a
             href="#about"
             onClick={() => setMobileMenuOpen(false)}
-            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
+            className="min-h-[44px] flex items-center px-4 py-2 text-black font-bold rounded-2xl border border-transparent transition-all duration-200 hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs active:scale-95"
           >
             About
           </a>
           <a
             href="#projects"
             onClick={() => setMobileMenuOpen(false)}
-            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
+            className="min-h-[44px] flex items-center px-4 py-2 text-black font-bold rounded-2xl border border-transparent transition-all duration-200 hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs active:scale-95"
           >
             Projects
           </a>
           <a
             href="#skills"
             onClick={() => setMobileMenuOpen(false)}
-            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
+            className="min-h-[44px] flex items-center px-4 py-2 text-black font-bold rounded-2xl border border-transparent transition-all duration-200 hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs active:scale-95"
           >
             Skills
           </a>
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className="min-h-[44px] flex items-center px-2 text-black font-bold hover:text-blue-600 rounded-xl hover:bg-black/5 transition-colors"
+            className="min-h-[44px] flex items-center px-4 py-2 text-black font-bold rounded-2xl border border-transparent transition-all duration-200 hover:bg-white/90 hover:backdrop-blur-md hover:border-slate-200/90 hover:shadow-xs active:scale-95"
           >
             Contact
           </a>
