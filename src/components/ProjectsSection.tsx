@@ -155,101 +155,118 @@ export default function ProjectsSection() {
         </div>
       )}
 
-      {/* Detailed Project Modal */}
+      {/* Detailed Project Slide-Over Glass Sheet */}
       {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200"
-          onClick={() => setSelectedProject(null)}
-        >
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          {/* Frosted Glass Backdrop */}
           <div
-            className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 flex flex-col gap-6 relative animate-in zoom-in-95 duration-200"
+            className="fixed inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity duration-300 animate-in fade-in cursor-pointer"
+            onClick={() => setSelectedProject(null)}
+            aria-hidden="true"
+          />
+
+          {/* Slide-Over Panel */}
+          <aside
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-sheet-title"
+            className="fixed inset-y-0 right-0 w-full max-w-[560px] sm:max-w-[620px] bg-white/95 backdrop-blur-2xl border-l border-slate-200/90 shadow-2xl flex flex-col justify-between z-50 animate-in slide-in-from-right duration-300 ease-out"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-5 right-5 p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-800 transition-colors cursor-pointer"
-              aria-label="Close project details"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            {/* Modal Image Showcase */}
-            <div className="w-full h-56 sm:h-64 rounded-2xl bg-[#f6f3eb] flex items-center justify-center p-4 overflow-hidden border border-slate-100">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={encodeURI(selectedProject.image || "/Projects-SS/qwen-fine-tuning.png")}
-                alt={selectedProject.title}
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  if (!target.src.includes("Qwen%20Fine-Tuning.png")) {
-                    target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
-                  }
-                }}
-                className="max-h-full max-w-full object-contain rounded-xl shadow-md"
-              />
-            </div>
-
-            {/* Modal Title & Badges */}
-            <div className="space-y-2">
-              <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
-                <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-semibold">
+            {/* Sticky Header Bar */}
+            <div className="p-5 sm:p-6 border-b border-slate-100 flex items-center justify-between gap-4 sticky top-0 bg-white/80 backdrop-blur-md z-10">
+              <div className="flex items-center gap-2">
+                <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-mono text-xs font-semibold">
                   {selectedProject.tagLabel || getCategoryLabel(selectedProject.category)}
                 </span>
                 {selectedProject.metrics && (
-                  <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-semibold">
+                  <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-mono text-[11px] font-medium hidden sm:inline-block">
                     {selectedProject.metrics}
                   </span>
                 )}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sora">
-                {selectedProject.title}
-              </h3>
-              <p className="text-sm text-slate-600 font-sans">
-                {selectedProject.subtitle}
-              </p>
+
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-black flex items-center justify-center transition-all active:scale-95 cursor-pointer shadow-2xs"
+                aria-label="Close project panel"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </div>
 
-            {/* Key Deliverables & System Highlights */}
-            <div className="space-y-2.5">
-              <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
-                System Highlights &amp; Architecture
-              </h4>
-              <ul className="space-y-2">
-                {selectedProject.description.map((bullet, idx) => (
-                  <li
-                    key={idx}
-                    className="text-xs sm:text-sm text-slate-700 font-sans flex items-start gap-2.5 leading-relaxed"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-slate-900 mt-0.5 shrink-0" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Scrollable Project Body */}
+            <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-6">
+              {/* Image Showcase Stage with neutral slate tint */}
+              <div className="w-full h-56 sm:h-72 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-center justify-center p-4 sm:p-6 overflow-hidden shadow-2xs">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={encodeURI(selectedProject.image || "/Projects-SS/qwen-fine-tuning.png")}
+                  alt={selectedProject.title}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.src.includes("Qwen%20Fine-Tuning.png")) {
+                      target.src = "/Projects-SS/Qwen%20Fine-Tuning.png";
+                    }
+                  }}
+                  className="max-h-full max-w-full object-contain rounded-xl shadow-sm"
+                />
+              </div>
 
-            {/* Tech Stack */}
-            <div className="space-y-2 pt-2 border-t border-slate-100">
-              <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
-                Technologies &amp; Frameworks
-              </h4>
-              <div className="flex flex-wrap gap-1.5">
-                {selectedProject.technologies.map((tech) => (
-                  <BentoTag key={tech}>{tech}</BentoTag>
-                ))}
+              {/* Title & Subtitle */}
+              <div className="space-y-1.5">
+                <h3 id="project-sheet-title" className="text-2xl sm:text-3xl font-bold text-slate-900 font-sora tracking-tight leading-snug">
+                  {selectedProject.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
+                  {selectedProject.subtitle}
+                </p>
+              </div>
+
+              {/* Key Deliverables & System Highlights */}
+              <div className="space-y-3 pt-2">
+                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  System Highlights &amp; Architecture
+                </h4>
+                <ul className="space-y-2.5">
+                  {selectedProject.description.map((bullet, idx) => (
+                    <li
+                      key={idx}
+                      className="text-xs sm:text-sm text-slate-700 font-sans flex items-start gap-3 leading-relaxed"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-slate-900 mt-0.5 shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Tech Stack */}
+              <div className="space-y-3 pt-4 border-t border-slate-100">
+                <h4 className="text-xs font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  Technologies &amp; Frameworks
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech) => (
+                    <BentoTag key={tech}>{tech}</BentoTag>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Action Bar */}
-            {selectedProject.githubUrl && (
-              <div className="pt-4 border-t border-slate-100 flex justify-end">
+            {/* Sticky Bottom Action Bar */}
+            <div className="p-4 sm:p-6 border-t border-slate-100 bg-white/90 backdrop-blur-md flex items-center justify-between gap-3">
+              <div className="text-xs font-mono text-slate-400 hidden sm:block">
+                Press <kbd className="px-1.5 py-0.5 rounded-sm bg-slate-100 border border-slate-200 text-slate-700 text-[10px]">ESC</kbd> to close
+              </div>
+              {selectedProject.githubUrl && (
                 <a
                   href={selectedProject.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-mono font-semibold hover:bg-black transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black text-white text-xs font-mono font-semibold hover:bg-neutral-800 active:scale-95 transition-all shadow-md cursor-pointer ml-auto"
                 >
-                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                     <path
                       fillRule="evenodd"
                       clipRule="evenodd"
@@ -257,11 +274,11 @@ export default function ProjectsSection() {
                     />
                   </svg>
                   <span>View Source Code</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </aside>
         </div>
       )}
     </section>
