@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { BentoCard, BentoSectionHeader } from "@/components/ui/BentoCard";
-import { Mail, Copy, Check, ArrowUpRight } from "lucide-react";
+import { Copy, Check, ArrowUpRight } from "lucide-react";
 
 export default function ContactSection() {
   const { personal } = portfolioData;
@@ -47,8 +47,14 @@ export default function ContactSection() {
           {/* Card 1: Email + Copy Icon */}
           <div className="relative group/inner flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300">
             <div className="flex items-center justify-between gap-3 mb-4">
-              <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-200/80 text-blue-600 flex items-center justify-center shrink-0 shadow-2xs">
-                <Mail className="w-5 h-5" />
+              <div className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center shrink-0 shadow-xs">
+                <svg className="w-5 h-5" viewBox="52 42 88 66" aria-label="Official Gmail">
+                  <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
+                  <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
+                  <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
+                  <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92" />
+                  <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
+                </svg>
               </div>
               <button
                 type="button"
@@ -92,9 +98,12 @@ export default function ContactSection() {
             className="relative group/inner flex flex-col justify-between p-5 sm:p-6 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-blue-400 hover:shadow-md transition-all duration-300 cursor-pointer"
           >
             <div className="flex items-center justify-between gap-3 mb-4">
-              <div className="w-11 h-11 rounded-xl bg-[#0a66c2]/10 border border-[#0a66c2]/20 text-[#0a66c2] flex items-center justify-center shrink-0 shadow-2xs">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              <div className="w-11 h-11 rounded-xl bg-[#0a66c2] text-white flex items-center justify-center shrink-0 shadow-xs">
+                <svg className="w-5 h-5 fill-white" viewBox="0 0 72 72" aria-label="LinkedIn">
+                  <path
+                    d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                    fill="#FFFFFF"
+                  />
                 </svg>
               </div>
               <div className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 group-hover/inner:text-blue-600 transition-colors">
