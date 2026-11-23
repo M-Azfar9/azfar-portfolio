@@ -307,7 +307,7 @@ export const portfolioData: PortfolioData = {
       role: "Associate Software Engineer",
       company: "ZAM Studios",
       location: "Remote",
-      period: "Nov 2024 — Present",
+      period: "Nov 2024 - Aug 2026",
       type: "Full-Time Remote",
       description: [
         "Build and ship production Flutter mobile applications integrated with Generative AI features, applying rigorous prompt engineering, jailbreak testing, and injection defenses.",

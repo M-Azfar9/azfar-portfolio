@@ -22,7 +22,7 @@ export default function AboutSection() {
         <BentoCard
           variant="highlight"
           hoverEffect={true}
-          className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5 h-full"
+          className="lg:col-span-6 p-5 sm:p-8 flex flex-col justify-between gap-5 h-full"
         >
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
@@ -72,14 +72,14 @@ export default function AboutSection() {
           id="experience"
           variant="highlight"
           hoverEffect={true}
-          className="lg:col-span-6 p-6 sm:p-8 flex flex-col justify-between gap-5 h-full"
+          className="lg:col-span-6 p-5 sm:p-8 flex flex-col justify-between gap-5 h-full"
         >
           <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-[11px] font-mono font-semibold text-slate-800 tracking-wider uppercase">
                 PROFESSIONAL EXPERIENCE
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-slate-800 border border-slate-200/80 text-[11px] font-mono font-medium backdrop-blur-xs">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/80 text-slate-800 border border-slate-200/80 text-[10px] sm:text-[11px] font-mono font-medium backdrop-blur-xs whitespace-nowrap shrink-0">
                 {currentRole.period}
               </span>
             </div>
@@ -87,40 +87,40 @@ export default function AboutSection() {
             <div>
               <div className="flex items-center gap-2">
                 <Briefcase className="w-5 h-5 text-slate-900 shrink-0" />
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-sora tracking-tight">
+                <h3 className="text-lg sm:text-2xl font-bold text-slate-900 font-sora tracking-tight leading-snug">
                   {currentRole.role}
                 </h3>
               </div>
-              <p className="text-sm font-mono font-semibold text-slate-600 mt-1">
-                {currentRole.company}
+              <p className="text-xs sm:text-sm font-mono font-semibold text-slate-600 mt-1">
+                {currentRole.company} · {currentRole.location}
               </p>
             </div>
 
             {/* 3 Inner Border Cards reflecting the outer bokeh hover effect */}
-            <div className="flex flex-col gap-2.5 pt-2">
-              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
+            <div className="flex flex-col gap-2.5 pt-1 sm:pt-2">
+              <div className="group/inner relative flex items-start sm:items-center gap-3 p-3 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
                   <Smartphone className="w-4 h-4" />
                 </div>
-                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
+                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800 leading-snug">
                   Build Mobile Architecture &amp; Real-Time Systems
                 </span>
               </div>
 
-              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="group/inner relative flex items-start sm:items-center gap-3 p-3 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
-                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
+                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800 leading-snug">
                   Integrate Generative AI &amp; LLM with Jailbreaking
                 </span>
               </div>
 
-              <div className="group/inner relative flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
-                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="group/inner relative flex items-start sm:items-center gap-3 p-3 sm:p-4 rounded-2xl border border-slate-200/90 bg-white/40 backdrop-blur-md group-hover:bg-white/60 hover:!bg-white/90 hover:!border-slate-400 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div className="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200/90 text-slate-900 flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
                   <GitBranch className="w-4 h-4" />
                 </div>
-                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800">
+                <span className="text-xs sm:text-sm font-sans font-medium text-slate-800 leading-snug">
                   Distributed Collaboration &amp; CI/CD
                 </span>
               </div>
