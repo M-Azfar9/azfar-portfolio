@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { portfolioData } from "@/data/portfolioData";
 import { BentoCard, BentoTag } from "@/components/ui/BentoCard";
+import { TechCircleCard } from "@/components/ui/TechCircleCard";
 import Footer from "@/components/Footer";
 import {
   ArrowLeft,
@@ -173,9 +174,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   Technologies Used
                 </h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-y-5 gap-x-3 pt-2 items-start justify-items-center">
                 {project.technologies.map((tech) => (
-                  <BentoTag key={tech}>{tech}</BentoTag>
+                  <TechCircleCard key={tech} name={tech} />
                 ))}
               </div>
             </BentoCard>
