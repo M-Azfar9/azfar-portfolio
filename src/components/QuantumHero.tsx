@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import dynamic from "next/dynamic";
 import { portfolioData } from "@/data/portfolioData";
@@ -12,10 +12,35 @@ const DynamicQuantumCosmos = dynamic(
 
 export default function QuantumHero() {
   const { personal } = portfolioData;
+  const heroRef = useRef<HTMLElement>(null);
+  const [heroHeight, setHeroHeight] = useState<number>(0);
+
+  useEffect(() => {
+    if (!heroRef.current) return;
+    const updateHeight = () => {
+      if (heroRef.current) {
+        setHeroHeight(heroRef.current.offsetHeight);
+      }
+    };
+
+    updateHeight();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateHeight();
+    });
+
+    resizeObserver.observe(heroRef.current);
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
 
   return (
     <>
-      <section className="relative w-full min-h-[100svh] sm:min-h-[700px] flex items-center overflow-hidden select-none bg-[#f8fafc]">
+      <section ref={heroRef} className="relative w-full min-h-[100svh] sm:min-h-[700px] flex items-center overflow-hidden select-none bg-[#f8fafc]">
         {/* Background Image: Directly visible with object-cover and cache-busting */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -114,19 +139,20 @@ export default function QuantumHero() {
       </div>
     </section>
 
-    {/* 20% Mirror Reflection Transition Zone into Light Theme (#f8fafc) */}
+    {/* Mirror Reflection Transition Zone into Light Theme (#f8fafc) */}
     <div 
-      className="relative w-full h-[20vh] min-h-[140px] max-h-[240px] overflow-hidden select-none bg-[#f8fafc] pointer-events-none -mt-[1px]"
+      className="relative w-full h-[22vh] min-h-[140px] max-h-[260px] overflow-hidden select-none bg-[#f8fafc] pointer-events-none -mt-[1px]"
       aria-hidden="true"
     >
-      {/* Exact Vertically Flipped Mirror of the Hero Bottom */}
+      {/* Exact Vertically Flipped Mirror of the Hero Bottom: 100% Mathematically Synchronized */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/hero-section-bg.webp?v=2"
         alt=""
-        className="absolute inset-x-0 w-full h-[500%] object-cover object-center pointer-events-none"
+        className="absolute inset-x-0 w-full object-cover object-center pointer-events-none"
         style={{
-          top: "-500%",
+          height: heroHeight > 0 ? `${heroHeight}px` : "100svh",
+          bottom: "100%",
           transformOrigin: "bottom center",
           transform: "scaleY(-1)",
           imageRendering: "-webkit-optimize-contrast",
