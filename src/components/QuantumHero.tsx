@@ -46,8 +46,11 @@ export default function QuantumHero() {
       <img
         src="/hero-section-bg.webp?v=2"
         alt="Quantum Horizons Cosmic Background"
-        className="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none"
-        style={{ imageRendering: "-webkit-optimize-contrast" }}
+        className="absolute inset-0 w-full h-full object-cover object-center z-0 pointer-events-none opacity-70"
+        style={{ 
+          imageRendering: "-webkit-optimize-contrast",
+          opacity: 0.7,
+        }}
       />
 
       {/* Interactive R3F 3D Moving Stars Canvas (Circular dots on top of image) */}
@@ -72,16 +75,16 @@ export default function QuantumHero() {
             <span>{personal.eyebrow}</span>
           </div>
 
-          {/* Main Title using Deltha Font with Ultra-Bold Weight */}
+          {/* Main Title using Deltha Font with Normal Weight */}
           <div className="flex flex-col">
-            <h1 className="font-hero font-black text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase">
+            <h1 className="font-hero font-normal text-3xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[86px] tracking-[0.02em] sm:tracking-[0.03em] leading-[0.94] uppercase">
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-1 hero-ultra-bold block text-black font-black">
+                <span className="hero-title-line-1 block text-black font-normal">
                   MUHAMMAD
                 </span>
               </span>
               <span className="block overflow-hidden py-0.5">
-                <span className="hero-title-line-2 hero-ultra-bold block text-black font-black">
+                <span className="hero-title-line-2 block text-black font-normal">
                   AZFAR
                 </span>
               </span>
@@ -149,13 +152,14 @@ export default function QuantumHero() {
       <img
         src="/hero-section-bg.webp?v=2"
         alt=""
-        className="absolute inset-x-0 w-full object-cover object-center pointer-events-none"
+        className="absolute inset-x-0 w-full object-cover object-center pointer-events-none opacity-70"
         style={{
           height: heroHeight > 0 ? `${heroHeight}px` : "100svh",
           bottom: "100%",
           transformOrigin: "bottom center",
           transform: "scaleY(-1)",
           imageRendering: "-webkit-optimize-contrast",
+          opacity: 0.7,
         }}
       />
 
